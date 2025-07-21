@@ -1,10 +1,9 @@
 # GTA 2 - Deck Edition
 
-Written 7/7/25
-
 This mod pack of GTA 2 is contains quality of life updates and crash fixes that make this game enjoyable on both the Steam Deck and Windows 11 out of the box. Additionally, some of the best community maps made have been translated, included, and showcased in the map manager.
 
-
+![Steam Deck Image](https://private-user-images.githubusercontent.com/61168382/468435417-dc3707dd-10a7-43af-ae43-b83636b157fa.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTMwNjIzODIsIm5iZiI6MTc1MzA2MjA4MiwicGF0aCI6Ii82MTE2ODM4Mi80Njg0MzU0MTctZGMzNzA3ZGQtMTBhNy00M2FmLWFlNDMtYjgzNjM2YjE1N2ZhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA3MjElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNzIxVDAxNDEyMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTZiM2E3ODJiMmNjZjA5MzA4ZTcyOTk4MDVlM2E0OGQ2YmM0YmZhOWJkNzMzOTY4Y2U1Y2Y3OGUwNTYyOGI2MWQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0._ZddCXYvPotJo6Moenr8pYTvXFk7BZLf4JlxE0XePto)
+![Mod Manager Image](https://private-user-images.githubusercontent.com/61168382/468437090-fcbf36a1-2dde-4338-a3fd-4660c5b2c7ab.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTMwNjI0NjUsIm5iZiI6MTc1MzA2MjE2NSwicGF0aCI6Ii82MTE2ODM4Mi80Njg0MzcwOTAtZmNiZjM2YTEtMmRkZS00MzM4LWEzZmQtNDY2MGM1YjJjN2FiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA3MjElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNzIxVDAxNDI0NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTgzNDRhZGVkZGU0YmE0OWU3YjQyZGE0ZTQyZmI0NzVkNzVkMjU1NWZlMWYwNWQwY2ZiMDliMjQyODIyYjMzM2MmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.dxnD8bxlRpF4I4i9_4pLyFiNOKhX9n8Aaqpk-JQsnrM)
 
 ## What's Included
 
@@ -37,24 +36,6 @@ Easiest way: Add the `GTA 2 Launcher.exe` as a non steam game and launch with th
 Better way: Add the `GTA 2 Launcher.exe` to a wine prefix using bottles or other utility, and then add to steam.
 
 See "Wine/Proton Settings" Section for necessary DLL overrides
-
-## Steam Deck Notes
-
-In order to get this game running on the Steam Deck, I have made the following change:
-
-### Resolution & Window Settings
-
-Under `\ufiles\settings.xml`
-
-```
-	<display>
-		<ScreenWidth value="1280" />
-		<ScreenHeight value="800" />
-		<ScreenType value="borderless windowed" />
-	</display>
-```
-
-Its important to match the resolution to the device and make the screenType borderless windowed otherwise the game will crash on launch.
 
 ### Wine/Proton Settings
 
@@ -96,3 +77,21 @@ Install Order:
 The mod manager was created intentionally with .NET Framework 4.8 since this version is most compatible with wine/proton. 
 
 Once compiled, the mod manager must go into a "Mod Manager" folder
+
+### Steam Deck Notes
+
+In order to get this game running on the Steam Deck, I have made the following change:
+
+### Resolution & Window Settings
+
+Under `\ufiles\settings.xml`
+
+```
+	<display>
+		<ScreenWidth value="1280" />
+		<ScreenHeight value="800" />
+		<ScreenType value="borderless windowed" />
+	</display>
+```
+
+Its important to match the resolution to the device and make the screenType borderless windowed otherwise the game will crash on launch.
