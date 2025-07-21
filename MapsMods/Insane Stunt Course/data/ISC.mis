@@ -1,0 +1,108 @@
+ //******************************************************************************************
+//**********************************Insane*Stunt*Cours**************************************
+//******************************************************************************************
+//**************************** Made by Holy_Jack and OXMOX *********************************
+//******************************************************************************************
+//**************************************MOONMONKEYS*****************************************
+//******************************************************************************************
+
+
+
+/* This is the script of the Insane Stunt Cours
+[for use with ISC.gmp] */
+
+
+
+
+PLAYER_PED elvis = ( 12.5 , 18.5 , 2.0 ) 12 0  //Here you start, the 12 mean you look like Elvis
+
+
+ARROW_DATA arrow_end  //Thats the big aroow at the end
+
+
+OBJ_DATA phone_1  =  ( 11.5  , 18.5 , 2.0 )  180  phone   //That is the first phone 
+OBJ_DATA phone_2  =  ( 78.5 , 83.5 , 2.0 )  180  phone    //the second
+OBJ_DATA phone_3  =  ( 143.5  , 79.5 , 2.0 )  270  phone  //the third
+
+
+
+OBJ_DATA flamethrower_1  =  ( 79.5  , 85.5 , 2.0)  0 COLLECT_08  //the flamethrower
+OBJ_DATA mutiplier  =  ( 78.5  , 85.5 , 2.0 )  0 COLLECT_28      //the mutipler
+
+
+SAVED_COUNTER gameloop = 1
+
+FORWARD answear_phone_1:
+FORWARD answear_phone_2:
+FORWARD answear_phone_3:
+
+
+
+THREAD_TRIGGER thread_phone_1 = THREAD_WAIT_FOR_ANSWER_PHONE ( elvis , phone_1 , answear_phone_1: )
+THREAD_TRIGGER thread_phone_2 = THREAD_WAIT_FOR_ANSWER_PHONE ( elvis , phone_2 , answear_phone_2: )
+THREAD_TRIGGER thread_phone_3 = THREAD_WAIT_FOR_ANSWER_PHONE ( elvis , phone_3 , answear_phone_3: )
+
+
+answear_phone_1:
+
+DISPLAY_BRIEF ( 3724 )  //"Hello Elvis! I love your music, would you like to play on my party this night?"
+		
+DISPLAY_BRIEF ( 3725 )  //"But be careful, the street is a little bit destroyed. #See you!#"
+
+RETURN
+
+
+answear_phone_2:
+
+DISPLAY_BRIEF ( 3728 )  //"What are ya doing here? Is here anything interesting apart from the #flamethrower#?"
+		
+DISPLAY_BRIEF ( 3729 )  //"Hurry up!We´re waiting for you!"
+
+RETURN
+
+
+
+answear_phone_3:
+
+DISPLAY_BRIEF ( 3726 )  //"#Great#, you have found my house!"
+		
+DISPLAY_BRIEF ( 3727 )  //"#Come in!#"
+
+RETURN
+
+
+
+
+
+LEVELSTART
+
+
+
+WHILE ( gameloop = 1 )
+
+     
+	IF ( LOCATE_CHARACTER_ANY_MEANS ( elvis , 143.5  , 79.5 , 2.0 , 1.0 , 1.0 ))
+		LEVEL_END_POINT_ARROW_AT ( arrow_end , 149.5  , 78.5 , 2.0 )
+	ENDIF
+	
+	
+	IF ( LOCATE_CHARACTER_ANY_MEANS ( elvis , 149.5  , 78.5 , 2.0 , 1.0 , 1.0 ) ) 
+		FINISH_LEVEL ( bonus_1 )
+	ENDIF
+       
+ENDWHILE
+
+//The Copcars:
+PARKED_CAR_DATA  car_1  =   (  12.5 ,  19.5  ) 28  90  COPCAR     
+PARKED_CAR_DATA  car_2  =   (  12.5 ,  20.5  ) 28  90  COPCAR
+PARKED_CAR_DATA  car_3  =   (  13.5 ,  19.5  ) 28  90  COPCAR
+PARKED_CAR_DATA  car_4  =   (  13.5 ,  20.5  ) 28  90  COPCAR
+
+PARKED_CAR_DATA  car_5  =   (  123.5 ,  238.5 ) 28  90  COPCAR
+PARKED_CAR_DATA  car_6  =   (  124.5 ,  238.5 ) 28  90  COPCAR
+PARKED_CAR_DATA  car_7  =   (  123.5 ,  239.5 ) 28  90  COPCAR
+PARKED_CAR_DATA  car_8  =   (  124.5 ,  239.5 ) 28  90  COPCAR
+
+LEVELEND
+
+

@@ -1,0 +1,16 @@
+MainOrBonus = MAIN
+GMPFile = fast_furious.gmp
+STYFile = ste.sty
+SCRFile = fast_furious.scr
+Description = the fast and the furious
+
+MainOrBonus = BONUS
+GMPFile = fast_furious.gmp
+STYFile = ste.sty
+SCRFile = fast_furious.scr
+Description = the fast and the furious
+
+
+
+
+

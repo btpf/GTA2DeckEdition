@@ -1,0 +1,384 @@
+LEVELSTART
+player_ped r_e_2_pla = ( 180.0,42.0,3.0 ) 2 0
+set_gang_info ( zaibgang , 8 , pistol , silenced_machine_gun , rocket_launcher , 5 , 10.0 , 47.0 , 3.0 , 1 , miura , 26  )
+set_gang_info ( redngang , 5 , pistol , silenced_machine_gun , rocket_launcher , 3 , 30.0 , 238.0 , 3.0 , 1 , zcx5 , 15  ) 
+car_data agepcar1
+agepcar1 = create_gang_car ( 31.0,236.0,2.0 ) 15 0 ZCX5 END
+car_data agepcar2
+agepcar2 = create_gang_car ( 32.0,236.0,2.0 ) 15 0 ZCX5 END
+car_data agepcar3
+agepcar3 = create_gang_car ( 33.0,236.0,2.0 ) 2 0 ZCX5 END
+car_data agepcar4
+agepcar4 = create_gang_car ( 34.0,236.0,2.0 ) 3 0 ZCX5 END
+car_data agepcar5
+agepcar5 = create_gang_car ( 35.0,236.0,2.0 ) 4 0 ZCX5 END
+car_data agepcar6
+agepcar6 = create_gang_car ( 36.0,236.0,2.0 ) 5 0 ZCX5 END
+car_data agepcar7
+agepcar7 = create_gang_car ( 37.0,236.0,2.0 ) 6 0 ZCX5 END
+car_data agepcar8
+agepcar8 = create_gang_car ( 38.0,236.0,2.0 ) 7 0 ZCX5 END
+car_data agepcar9
+agepcar9 = create_gang_car ( 41.0,232.0,5.0 ) 8 0 ZCX5 END
+car_data agepcar10
+agepcar10 = create_gang_car ( 34.0,232.0,2.0 ) 9 0 ZCX5 END
+car_data agepcar11
+agepcar11 = create_gang_car ( 29.0,230.0,2.0 ) 15 0 ZCX5 END
+give_car_alarm (agepcar11)
+car_data jaspcar1
+jaspcar1 = create_car ( 181.0,47.0,3.0 ) 26 359 MIURA mini_car END
+car_data jaspcar2
+jaspcar2 = create_gang_car ( 21.0,74.0,2.0 ) 0 0 MIURA mini_car END
+give_car_alarm (jaspcar2)
+car_data jaspcar3
+jaspcar3 = create_gang_car ( 20.0,74.0,2.0 ) 1 0 MIURA END
+give_car_alarm (jaspcar3) 
+car_data jaspcar4
+jaspcar4 = create_gang_car ( 19.0,74.0,2.0 ) 2 0 MIURA END
+give_car_alarm (jaspcar4) 
+car_data jaspcar5
+jaspcar5 = create_gang_car ( 18.0,74.0,2.0 ) 3 0 MIURA END
+give_car_alarm (jaspcar5) 
+car_data jaspcar6
+jaspcar6 = create_gang_car ( 17.0,74.0,2.0 ) 4 0 MIURA END
+give_car_alarm (jaspcar6) 
+car_data jaspcar7
+jaspcar7 = create_gang_car ( 16.0,74.0,2.0 ) 5 0 MIURA END
+give_car_alarm (jaspcar7)
+car_data jaspcar8
+jaspcar8 = create_gang_car ( 15.0,74.0,2.0 ) 6 0 MIURA END
+give_car_alarm (jaspcar8)
+car_data jaspcar9
+jaspcar9 = create_gang_car ( 15.0,71.0,2.0 ) 7 0 MIURA END
+give_car_alarm (jaspcar9)
+car_data jaspcar10
+jaspcar10 = create_gang_car ( 16.0,71.0,2.0 ) 8 0 MIURA END
+give_car_alarm (jaspcar10)
+car_data jaspcar11
+jaspcar11 = create_gang_car ( 17.0,71.0,2.0 ) 9 0 MIURA END
+give_car_alarm (jaspcar11)
+car_data jaspcar12
+jaspcar12 = create_gang_car ( 18.0,71.0,2.0 ) 10 0 MIURA END
+give_car_alarm (jaspcar12)
+car_data jaspcar13
+jaspcar13 = create_gang_car ( 9.0,44.0,2.0 ) 11 0 MIURA END
+give_car_alarm (jaspcar13)
+car_data jaspcar14
+jaspcar14 = create_gang_car ( 10.0,44.0,2.0 ) 12 0 MIURA END
+give_car_alarm (jaspcar14)
+car_data jaspcar15
+jaspcar15 = create_gang_car ( 11.0,44.0,2.0 ) 13 0 MIURA END
+give_car_alarm (jaspcar15)
+car_data jaspcar16
+jaspcar16 = create_gang_car ( 52.0,70.0,2.0 ) 14 0 MIURA END
+give_car_alarm (jaspcar16)
+car_data jaspcar17
+jaspcar17 = create_gang_car ( 53.0,70.0,2.0 ) 15 0 MIURA END
+give_car_alarm (jaspcar17)
+car_data jaspcar18
+jaspcar18 = create_gang_car ( 54.0,70.0,2.0 ) 16 0 MIURA END
+give_car_alarm (jaspcar18)
+car_data jaspcar19
+jaspcar19 = create_gang_car ( 55.0,70.0,2.0 ) 17 0 MIURA END
+give_car_alarm (jaspcar19)
+car_data jaspcar20
+jaspcar20 = create_gang_car ( 56.0,70.0,2.0 ) 18 0 MIURA END
+give_car_alarm (jaspcar20)
+car_data jaspcar21
+jaspcar21 = create_gang_car ( 50.0,37.0,2.0 ) 19 0 MIURA END
+give_car_alarm (jaspcar21)
+car_data jaspcar22
+jaspcar22 = create_gang_car ( 66.0,32.0,2.0 ) 20 0 MIURA END
+give_car_alarm (jaspcar22)
+car_data jaspcar23
+jaspcar23 = create_gang_car ( 67.0,32.0,2.0 ) 21 0 MIURA END
+give_car_alarm (jaspcar23)
+car_data jaspcar24
+jaspcar24 = create_gang_car ( 68.0,32.0,2.0 ) 22 0 MIURA END
+give_car_alarm (jaspcar24)
+car_data jaspcar25
+jaspcar25 = create_gang_car ( 69.0,32.0,2.0 ) 23 0 MIURA END
+give_car_alarm (jaspcar25)
+car_data ppcar1
+ppcar1 = create_car ( 94.0,75.0,2.0 ) 0 270 ALFA END
+give_car_alarm (ppcar1)
+car_data ppcar2
+ppcar2 = create_car ( 94.0,76.0,2.0 ) 1 270 T2000GT END
+give_car_alarm (ppcar2)
+car_data ppcar3
+ppcar3 = create_car ( 94.0,77.0,2.0 ) 2 270 AMDB4 END
+give_car_alarm (ppcar3)
+car_data ppcar4
+ppcar4 = create_car ( 94.0,78.0,2.0 ) 3 270 TANKER END
+give_car_alarm (ppcar4)
+car_data ppcar5
+ppcar5 = create_car ( 94.0,79.0,2.0 ) 4 270 BANKVAN END
+give_car_alarm (ppcar5)
+car_data ppcar6
+ppcar6 = create_car ( 94.0,80.0,2.0 ) 5 270 BMW END
+give_car_alarm (ppcar6)
+car_data ppcar8
+ppcar8 = create_car ( 94.0,82.0,2.0 ) 7 270 BOXTRUCK END
+give_car_alarm (ppcar8)
+car_data ppcar9
+ppcar9 = create_car ( 94.0,83.0,2.0 ) 8 270 BUG END
+give_car_alarm (ppcar9)
+car_data ppcar10
+ppcar10 = create_car ( 94.0,84.0,2.0 ) 9 270 BUICK END
+give_car_alarm (ppcar10)
+car_data ppcar11
+ppcar11 = create_car ( 94.0,85.0,2.0 ) 10 270 BUS END
+give_car_alarm (ppcar11)
+car_data ppcar12
+ppcar12 = create_car ( 94.0,86.0,2.0 ) 11 270 DART END
+give_car_alarm (ppcar12)
+car_data ppcar13
+ppcar13 = create_car ( 94.0,87.0,2.0 ) 12 270 EDSEL END
+give_car_alarm (ppcar13)
+car_data ppcar14
+ppcar14 = create_car ( 94.0,88.0,2.0 ) 13 270 GRAHAM END
+give_car_alarm (ppcar14)
+car_data ppcar15
+ppcar15 = create_car ( 94.0,89.0,2.0 ) 14 270 FIAT END
+give_car_alarm (ppcar15)
+car_data ppcar16
+ppcar16 = create_car ( 94.0,90.0,2.0 ) 15 270 GTRUCK END
+give_car_alarm (ppcar16)
+car_data ppcar17
+ppcar17 = create_car ( 94.0,91.0,2.0 ) 16 270 HOTDOG END
+give_car_alarm (ppcar17)
+car_data ppcar18
+ppcar18 = create_car ( 96.0,75.0,2.0 ) 17 270 ICECREAM END
+give_car_alarm (ppcar18)
+car_data ppcar19
+ppcar19 = create_car ( 96.0,76.0,2.0 ) 18 270 ISETLIMO END
+give_car_alarm (ppcar19)
+car_data ppcar20
+ppcar20 = create_car ( 96.0,77.0,2.0 ) 19 270 ISETTA END
+give_car_alarm (ppcar20)
+car_data ppcar21
+ppcar21 = create_car ( 96.0,78.0,2.0 ) 20 270 STRATOSB END
+give_car_alarm (ppcar21)
+car_data ppcar22
+ppcar22 = create_car ( 96.0,79.0,2.0 ) 21 270 LIMO END
+give_car_alarm (ppcar22)
+car_data ppcar23
+ppcar23 = create_car ( 96.0,80.0,2.0 ) 22 270 LIMO2 END
+give_car_alarm (ppcar23)
+car_data ppcar24
+ppcar24 = create_car ( 96.0,82.0,2.0 ) 23 270 MERC END
+give_car_alarm (ppcar24)
+car_data ppcar25
+ppcar25 = create_car ( 96.0,83.0,2.0 ) 24 270 MESSER END
+give_car_alarm (ppcar25)
+car_data ppcar26
+ppcar26 = create_car ( 96.0,84.0,2.0 ) 25 270 MIURA END
+give_car_alarm (ppcar26)
+car_data ppcar27
+ppcar27 = create_car ( 96.0,85.0,2.0 ) 26 270 MONSTER END
+give_car_alarm (ppcar27)
+car_data ppcar28
+ppcar28 = create_car ( 96.0,86.0,2.0 ) 27 270 MORGAN END
+give_car_alarm (ppcar28)
+car_data ppcar29
+ppcar29 = create_car ( 96.0,87.0,2.0 ) 28 270 STRATOS END
+give_car_alarm (ppcar29)
+car_data ppcar30
+ppcar30 = create_car ( 96.0,88.0,2.0 ) 29 270 PICKUP END
+give_car_alarm (ppcar30)
+car_data ppcar31
+ppcar31 = create_car ( 96.0,89.0,2.0 ) 30 270 RTYPE END
+give_car_alarm (ppcar31)
+car_data ppcar32
+ppcar32 = create_car ( 96.0,90.0,2.0 ) 31 270 SPIDER END
+give_car_alarm (ppcar32)
+car_data ppcar33
+ppcar33 = create_car ( 96.0,91.0,2.0 ) 32 270 STINGRAY END
+give_car_alarm (ppcar33)
+car_data ppcar34
+ppcar34 = create_car ( 73.0,249.0,2.0 ) 33 270 STRATOSB END
+give_car_alarm (ppcar34)
+car_data ppcar35
+ppcar35 = create_car ( 74.0,249.0,2.0 ) 34 270 STRIPETB END
+give_car_alarm (ppcar35)
+car_data ppcar36
+ppcar36 = create_car ( 75.0,249.0,2.0 ) 35 270 STYPE END
+give_car_alarm (ppcar36)
+car_data ppcar37
+ppcar37 = create_car ( 76.0,249.0,2.0 ) 36 270 STYPECAB END
+give_car_alarm (ppcar37)
+car_data bus1
+bus1 = create_car ( 238.0,94.0,2.0 ) 0 0 BUS END
+give_car_alarm (bus1)
+car_data bus2
+bus2 = create_car ( 239.0,94.0,2.0 ) 1 0 BUS END
+give_car_alarm (bus2)
+car_data bus3
+bus3 = create_car ( 238.0,96.0,2.0 ) 2 0 BUS END
+give_car_alarm (bus3)
+car_data bus4
+bus4 = create_car ( 239.0,96.0,2.0 ) 3 0 BUS END
+give_car_alarm (bus4)
+car_data bus5
+bus5 = create_car ( 238.0,98.0,2.0 ) 4 0 BUS END
+give_car_alarm (bus5)
+car_data bus6
+bus6 = create_car ( 239.0,98.0,2.0 ) 5 0 BUS END
+give_car_alarm (bus6)
+car_data bus7
+bus7 = create_car ( 238.0,100.0,2.0 ) 6 0 BUS END
+give_car_alarm (bus7)
+car_data bus8
+bus8 = create_car ( 239.0,100.0,2.0 ) 7 0 BUS END
+give_car_alarm (bus8)
+car_data bus9
+bus9 = create_car ( 238.0,102.0,2.0 ) 8 0 BUS END
+give_car_alarm (bus9)
+car_data bus10
+bus10 = create_car ( 239.0,102.0,2.0 ) 9 0 BUS END
+give_car_alarm (bus10)
+give_weapon ( jaspcar1 , car_machine_gun )
+car_data army1
+army1 = create_car ( 237.0,104.0,2.0 ) 10 91 GUNJEEP END
+give_car_alarm (army1)
+car_data army2
+army2 = create_car ( 237.0,103.0,2.0 ) 11 91 GUNJEEP END
+give_car_alarm (army2)
+car_data army3
+army3 = create_car ( 237.0,101.0,2.0 ) 12 91 GUNJEEP END
+give_car_alarm (army3)
+car_data army4
+army4 = create_car ( 237.0,100.0,2.0 ) 13 91 GUNJEEP END
+give_car_alarm (army4)
+car_data army5
+army5 = create_car ( 237.0,98.0,2.0 ) 14 91 JEEP END
+give_car_alarm (army5)
+car_data army6
+army6 = create_car ( 237.0,97.0,2.0 ) 15 91 JEEP END
+give_car_alarm (army6)
+car_data army7
+army7 = create_car ( 237.0,96.0,2.0 ) 16 91 JEEP END
+give_car_alarm (army7)
+car_data army8
+army8 = create_car ( 237.0,95.0,2.0 ) 17 91 JEEP END
+give_car_alarm (army8)
+car_data army9
+army9 = create_car ( 237.0,90.0,2.0 ) 18 91 APC END
+give_car_alarm (army9)
+car_data army10
+army10 = create_car ( 237.0,90.0,3.0 ) 19 91 APC END
+give_car_alarm (army10)
+car_data army11
+army11 = create_car ( 231.0,90.0,3.0 ) 20 91 TANK END
+give_car_alarm (army11)
+car_data army12
+army12 = create_car ( 231.0,90.0,2.0 ) 21 91 TANK END
+give_car_alarm (army12)
+car_data army13
+army13 = create_car ( 231.0,99.0,2.0 ) 22 91 TANK END
+give_car_alarm (army13)
+car_data army14
+army14 = create_car ( 231.0,99.0,3.0 ) 23 91 APC END
+give_car_alarm (army14)
+car_data cop1
+cop1 = create_car ( 233.0,147.0,3.0 ) 24 0 COPCAR END
+give_car_alarm (cop1)
+car_data cop2
+cop2 = create_car ( 234.0,147.0,3.0 ) 25 0 COPCAR END
+give_car_alarm (cop2)
+car_data cop3
+cop3 = create_car ( 235.0,147.0,3.0 ) 26 0 COPCAR END
+give_car_alarm (cop3)
+car_data cop4
+cop4 = create_car ( 236.0,147.0,3.0 ) 27 0 COPCAR END
+give_car_alarm (cop4)
+car_data cop5
+cop5 = create_car ( 237.0,147.0,3.0 ) 28 0 COPCAR END
+give_car_alarm (cop5)
+car_data cop6
+cop6 = create_car ( 238.0,147.0,3.0 ) 29 0 COPCAR END
+give_car_alarm (cop6)
+car_data cop7
+cop7 = create_car ( 233.0,148.0,3.0 ) 30 91 EDSELFBI END
+give_car_alarm (cop7)
+car_data cop8
+cop8 = create_car ( 233.0,149.0,3.0 ) 31 91 EDSELFBI END
+give_car_alarm (cop8)
+car_data cop9
+cop9 = create_car ( 233.0,150.0,3.0 ) 32 91 EDSELFBI END
+give_car_alarm (cop9)
+car_data cop10
+cop10 = create_car ( 233.0,151.0,3.0 ) 33 91 EDSELFBI END
+give_car_alarm (cop10)
+car_data cop11
+cop11 = create_car ( 234.0,151.0,3.0 ) 34 359 SWATVAN END
+give_car_alarm (cop11)
+car_data cop12
+cop12 = create_car ( 235.0,151.0,3.0 ) 35 359 SWATVAN END
+give_car_alarm (cop12)
+car_data cop13
+cop13 = create_car ( 236.0,151.0,3.0 ) 36 359 SWATVAN END
+give_car_alarm (cop13)
+obj_data redspray
+redspray = create_obj ( 94.0,27.0,2.0 ) 359 car_shop 26 END
+obj_data gangp
+obj_data conrol
+gangp = create_obj ( 82.0,42.0,2.0 ) 0 collect_40 END
+gangp = create_obj ( 83.0,42.0,2.0 ) 0 collect_38 END
+take_remote_control_of_car ( r_e_2_pla,jaspcar1 )
+display_brief ( 6146 )
+delay_here ( 500 )
+display_brief ( 6000 )
+delay_here ( 1000 )
+display_brief ( 6003 )
+delay_here ( 500 )
+display_brief ( 6004 )
+delay_here ( 1000 )
+display_brief ( 6005 )
+car_data missc1
+missc1 = create_car ( 232.0,154.0,3.0 ) 36 0 FIRETRUK END
+give_weapon ( missc1 , car_flamethrower )
+car_data missc2
+missc2 = create_car ( 18.0,238.0,2.0 ) 0 0 EDSELFBI END
+delay_here ( 3500 )
+display_brief ( 6006 )
+delay_here ( 250 )
+display_brief ( 6007 )
+car_data missc3
+missc3 = create_car ( 232.0,154.0,3.0 ) 15 0 LIMO END
+delay_here ( 3500 )
+display_brief ( 6008 )
+delay_here ( 1000 )
+display_brief ( 6009 )
+delay_here ( 1500 )
+display_brief ( 6100 )
+delay_here ( 250 )
+display_brief ( 6101 )
+car_data missc4
+missc4 = create_car ( 40.0,237.0,2.0 ) 6 0 GT24640 END
+set_car_number_graphic ( missc4,1 )
+car_data missc5
+missc5 = create_car ( 41.0,237.0,2.0 ) 26 0 GT24640 END
+set_car_number_graphic ( missc5,2 )
+car_data missc6
+missc6 = create_car ( 23.0,69.0,2.0 ) 34 0 GT24640 END
+set_car_number_graphic ( missc6,3 )
+car_data missc7
+missc7 = create_car ( 23.0,71.0,2.0 ) 31 0 GT24640 END
+set_car_number_graphic ( missc7,4 )
+delay_here ( 7500 )
+display_brief ( 6102 )
+car_data missc8
+missc8 = create_car ( 173.0,46.0,3.0 ) 16 0 GT24640 END
+set_car_number_graphic ( missc8,5 )
+car_data missc9
+missc9 = create_car ( 175.0,46.0,3.0 ) 13 0 GT24640 END
+set_car_number_graphic ( missc9,6 )
+car_data missc10
+missc10 = create_car ( 203.0,126.0,2.0 ) 6 0 GT24640 END
+set_car_number_graphic ( missc10,7 )
+car_data missc11
+missc11 = create_car ( 232.0,153.0,3.0 ) 24 0 GT24640 END
+set_car_number_graphic ( missc10,8 )
+delay_here ( 7500 )
+display_brief ( 6103 )

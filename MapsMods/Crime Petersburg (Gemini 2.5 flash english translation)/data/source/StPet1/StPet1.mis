@@ -1,0 +1,463 @@
+
+COUNTER kill_swats = 0
+COUNTER cargone = 0
+COUNTER army = 0
+COUNTER army_1 = 0
+
+ARROW_DATA cargone_arrow
+ARROW_DATA carpark_arrow
+ARROW_DATA APC_arrow
+ARROW_DATA cargone2_arrow
+ARROW_DATA factory_end_arrow
+
+SOUND army_in_trap
+SOUND haha1
+SOUND scare_army
+
+//Полицейские, вояки, подставки, водители.
+CHAR_DATA swatleader 
+CHAR_DATA swat1
+CHAR_DATA swat2
+CHAR_DATA swat3
+CHAR_DATA swat4
+CHAR_DATA swat5
+CHAR_DATA swattrap1
+CHAR_DATA army1
+CHAR_DATA army2
+CHAR_DATA army3
+CHAR_DATA army4
+CHAR_DATA army5
+CHAR_DATA army6
+CHAR_DATA army8
+CHAR_DATA army9
+CHAR_DATA army10
+CHAR_DATA army11
+CHAR_DATA army12
+CHAR_DATA tank1d
+CHAR_DATA tank2d
+CHAR_DATA tank3d
+
+
+//Машины для заданий
+CAR_DATA bratocar
+
+//Военные машины
+CAR_DATA army1c
+CAR_DATA army2c
+CAR_DATA army3c
+CAR_DATA army4c
+CAR_DATA army5c
+CAR_DATA army6c
+CAR_DATA army7c
+CAR_DATA army8c
+CAR_DATA APC_army
+
+FORWARD clean_up_neutral_mission: 
+
+neutral_mission:
+
+SET flag_failed_neutral_mission = 0
+SET flag_on_mission = 1
+SET flag_on_neutral_mission = 1
+
+// Чеченцы ждут прибытия генерала Джахара, проникни в машину, в которую он должен сесть для последуещей отправки на вертолете.
+DISPLAY_MESSAGE (9003)
+DISPLAY_brief (9004)
+swatleader =  CREATE_CHAR ( 13.5 , 12.5 , 5.0 )  41  180 SWAT END         
+swat1 = CREATE_CHAR ( 12.5 , 5.5 , 5.0 )  41  275 SWAT END         
+swat2 = CREATE_CHAR ( 12.5 , 7.5 , 5.0 )  41  265 SWAT END          
+swat3 = CREATE_CHAR ( 7.5 , 9.5 , 5.0 )  41  270 SWAT END  
+swat4 = CREATE_CHAR ( 14.5 , 13.5 , 5.0 )  41  165 SWAT END
+swat5 = CREATE_CHAR ( 12.5 , 13.5 , 5.0 )  41  125 SWAT END       
+SET_CHAR_THREAT_REACTION ( swat1 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( swat2 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( swat3 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( swat4 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( swat5 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( swatleader , react_as_normal )
+SET_CHAR_OBJECTIVE (swat1, GUARD_AREA)
+SET_CHAR_OBJECTIVE (swat2, GUARD_AREA)
+SET_CHAR_OBJECTIVE (swat3, GUARD_AREA)
+SET_CHAR_OBJECTIVE (swat4, GUARD_AREA)
+SET_CHAR_OBJECTIVE (swat5, GUARD_AREA)
+SET_CHAR_OBJECTIVE (swatleader, GUARD_AREA)
+SET_CHAR_THREAT_SEARCH ( swat1 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( swat2 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( swat3 , line_of_sight_player_only )
+SET_CHAR_THREAT_SEARCH ( swat4 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( swat5 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( swatleader , line_of_sight_player_only )
+GIVE_WEAPON (swat1, silenced_machine_gun)
+GIVE_WEAPON (swat2, silenced_machine_gun)
+GIVE_WEAPON (swat3, molotov)
+GIVE_WEAPON (swat4, shotgun)
+GIVE_WEAPON (swat5, shotgun)
+GIVE_WEAPON (swatleader, SILENCED_MACHINE_GUN)
+
+ADD_CHAR_TO_GANG (swat1, fbigang)
+ADD_CHAR_TO_GANG (swat2, fbigang)
+ADD_CHAR_TO_GANG (swat3, fbigang)
+ADD_CHAR_TO_GANG (swat4, fbigang)
+ADD_CHAR_TO_GANG (swat5, fbigang)
+ADD_CHAR_TO_GANG (swatleader, fbigang)
+
+//Создание машины - подставки
+bratocar = CREATE_CAR (13.5, 15.5, 5.0) 1 90 JEEP END
+
+
+
+
+// Убийство чеченцев
+WHILE ( kill_swats = 0 ) 
+IF ( ( ( HAS_CHARACTER_DIED (swatleader) )
+	AND (HAS_CHARACTER_DIED (swat2) ) ) 
+                AND (HAS_CHARACTER_DIED (swat3) ) )
+SET kill_swats = 1 
+ENDIF
+ENDWHILE
+
+// Подожди чеченца
+WHILE (cargone = 0)
+IF ( ( IS_CHARACTER_IN_CAR (player, bratocar) ) AND (kill_swats = 1) )
+SET cargone = 1
+swattrap1 = CREATE_CHAR ( 13.5 , 10.5 , 5.0 )  41  90 SWAT END
+SET_CHAR_OBJECTIVE (swattrap1, ENTER_CAR_AS_PASSENGER, bratocar)
+SET_CHAR_THREAT_REACTION ( swattrap1 , no_reaction )
+ADD_CHAR_TO_GANG (swattrap1, fbigang)
+REMOVE_ARROW (cargone_arrow)    
+DISPLAY_brief (9005)
+ENDIF
+ENDWHILE
+
+// Езжай к стоянке
+WHILE (cargone=1)
+IF (IS_CHARACTER_IN_CAR (swattrap1, bratocar)) 
+POINT_ARROW_AT (carpark_arrow, 22.5, 16.5, 2.0)
+OPEN_DOOR (neutral_mission_antitank_door)
+SET cargone=2
+DISPLAY_brief (9006)
+ENDIF
+ENDWHILE
+
+WHILE (cargone = 2)
+IF (IS_CAR_IN_BLOCK (bratocar, 22.5, 16.5, 2.0))
+REMOVE_ARROW (carpark_arrow)
+SET cargone=3
+DISPLAY_BRIEF (9007)
+ENDIF
+ENDWHILE
+
+// Выйди из машины
+WHILE (cargone = 3)
+IF (NOT ( IS_CHARACTER_IN_CAR ( player, bratocar))) 
+SET_CHAR_OBJECTIVE (swattrap1, LEAVE_CAR, bratocar)
+GIVE_WEAPON (swattrap1, pistol)
+SET cargone = 4
+ENDIF
+ENDWHILE
+
+// Ты не чеченец, ты ОМОНовец!
+WHILE (cargone=4)
+IF ( NOT (IS_CHARACTER_IN_CAR (swattrap1, bratocar)))
+SET_CHAR_OBJECTIVE (swattrap1, FLEE_ON_FOOT_TILL_SAFE, player)
+scare_army = CREATE_SOUND (22.5, 15.5, 2.0) SCREAM PLAY_INSTANT END
+DISPLAY_brief (9008)
+CLOSE_DOOR (neutral_mission_antitank_door)
+SET cargone=7
+ENDIF
+ENDWHILE
+
+// Молодец, выезжай отсюда.
+WHILE (cargone=7)
+IF (HAS_CHARACTER_DIED (swattrap1))
+SET cargone=8
+DISPLAY_brief (9009)
+CHANGE_GANG_CHAR_RESPECT (armygang, player, -3)
+//Появление военных
+army1 = CREATE_CHAR (16.1, 10.5, 2.0) 4 0 ARMY END
+army2 = CREATE_CHAR (16.5, 10.5, 2.0) 4 0 ARMY END
+army3 = CREATE_CHAR (16.8, 10.5, 2.0) 4 0 ARMY END
+army4 = CREATE_CHAR (17.9, 10.5, 2.0) 4 0 ARMY END
+army5 = CREATE_CHAR (17.2, 10.5, 2.0) 4 0 ARMY END
+army6 = CREATE_CHAR (17.5, 10.5, 2.0) 4 0 ARMY END
+army8 = CREATE_CHAR (15.5, 15.5, 2.0) 4 90 ARMY END
+army9 = CREATE_CHAR (15.5, 15.8, 2.0) 4 90 ARMY END
+army10 = CREATE_CHAR (15.5, 15.2, 2.0) 4 90 ARMY END
+army11 = CREATE_CHAR (23.2, 6.5, 2.0) 4 270 ARMY END
+army12 = CREATE_CHAR (25.5, 7.5, 2.0) 4 0 ARMY END
+ADD_CHAR_TO_GANG (army1, armygang)
+ADD_CHAR_TO_GANG (army2, armygang)
+ADD_CHAR_TO_GANG (army3, armygang)
+ADD_CHAR_TO_GANG (army4, armygang)
+ADD_CHAR_TO_GANG (army5, armygang)
+ADD_CHAR_TO_GANG (army6, armygang)
+ADD_CHAR_TO_GANG (army8, armygang)
+ADD_CHAR_TO_GANG (army9, armygang)
+ADD_CHAR_TO_GANG (army10, armygang)
+ADD_CHAR_TO_GANG (army11, armygang)
+ADD_CHAR_TO_GANG (army12, armygang)
+
+//Появление танков и других машин
+army1c = CREATE_CAR (15.5, 11.7, 2.0) 1 25 TANK END
+army2c = CREATE_CAR (18.5, 11.7, 2.0) 1 340 TANK END
+army3c = CREATE_CAR (12.0, 11.7, 2.0) 1 0 TANK END
+army5c = CREATE_CAR (16.5, 15.5, 2.0) 1 45 GUNJEEP END
+army6c = CREATE_CAR (15.5, 16.5, 2.0) 1 320 GUNJEEP END
+army7c = CREATE_CAR (25.5, 11.9, 2.0) 1 180 APC END
+army8c = CREATE_CAR (16.8, 9.5, 2.0) 1 270 APC END
+APC_army = CREATE_CAR (24.5, 6.5, 2.0) 1 90 APC END
+SET_CAR_ROCKETPROOF  (  army1c  ,  ON  )
+SET_CAR_ROCKETPROOF  (  army2c   ,  ON  )
+SET_CAR_ROCKETPROOF  (  army3c   ,  ON  )
+SET_CAR_ROCKETPROOF  (  APC_army   ,  ON  )
+SET_CAR_BULLETPROOF  (  APC_army  ,  ON  )
+SET_CAR_NO_COLLIDE (army1c)
+SET_CAR_NO_COLLIDE (army2c)
+SET_CAR_NO_COLLIDE (army3c)
+
+//Задания военных
+SET_CHAR_OBJECTIVE (army1, GUARD_AREA)
+SET_CHAR_OBJECTIVE (army2, GUARD_AREA)
+SET_CHAR_OBJECTIVE (army3, GUARD_AREA)
+SET_CHAR_OBJECTIVE (army4, GUARD_AREA)
+SET_CHAR_OBJECTIVE (army5, GUARD_AREA)
+SET_CHAR_OBJECTIVE (army6, GUARD_AREA)
+SET_CHAR_OBJECTIVE (army8, GUARD_AREA)
+SET_CHAR_OBJECTIVE (army9, GUARD_AREA)
+SET_CHAR_OBJECTIVE (army10, GUARD_AREA)
+SET_CHAR_OBJECTIVE (army11, GUARD_AREA)
+SET_CHAR_OBJECTIVE (army12, GUARD_AREA)
+//Вооружение военных
+GIVE_WEAPON (army1, rocket_launcher)
+GIVE_WEAPON (army2, machine_gun)
+GIVE_WEAPON (army3, rocket_launcher)
+GIVE_WEAPON (army4, machine_gun)
+GIVE_WEAPON (army5, machine_gun)
+GIVE_WEAPON (army6, rocket_launcher)
+GIVE_WEAPON (army8, machine_gun)
+GIVE_WEAPON (army9, machine_gun)
+GIVE_WEAPON (army10, machine_gun)
+GIVE_WEAPON (army11, machine_gun)
+GIVE_WEAPON (army12, machine_gun)
+
+SET_CHAR_THREAT_SEARCH ( army1 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( army2 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( army3 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( army4 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( army5 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( army6 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( army8 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( army9 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( army10 , area_player_only )
+SET_CHAR_THREAT_SEARCH ( army11 , LINE_OF_SIGHT_PLAYER_ONLY ) 
+SET_CHAR_THREAT_SEARCH ( army12 , LINE_OF_SIGHT_PLAYER_ONLY )
+
+SET_CHAR_THREAT_REACTION ( army1 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( army2 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( army3 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( army4 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( army5 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( army6 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( army8 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( army9 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( army10 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( army11 , react_as_normal )
+SET_CHAR_THREAT_REACTION ( army12 , react_as_normal )
+ENDIF
+ENDWHILE
+
+//Игрок увидал джипы, появились водители танков и все они заперлись. Черт! Военные узнали про чеченцев. Нужно избавиться от них. Ищи командный пост. 
+WHILE (army_1 = 0)
+IF ((IS_ITEM_ONSCREEN  (army5c)) AND (army=0))
+DISPLAY_BRIEF_NOW (9010)
+tank1d = CREATE_CHAR_INSIDE_CAR  (army1c)  0 road_block_tank_man  END
+tank2d = CREATE_CHAR_INSIDE_CAR  (army2c)  0 road_block_tank_man  END
+tank3d = CREATE_CHAR_INSIDE_CAR  (army3c)  0 road_block_tank_man  END
+CHANGE_CAR_LOCK ( army1c , locked ) 
+CHANGE_CAR_LOCK ( army2c , locked ) 
+CHANGE_CAR_LOCK ( army3c , locked ) 
+STOP_CHAR_DRIVING  (  tank1d )
+STOP_CHAR_DRIVING  (  tank2d )
+STOP_CHAR_DRIVING  (  tank3d )
+ADD_CHAR_TO_GANG (tank1d, armygang)
+ADD_CHAR_TO_GANG (tank2d, armygang)
+ADD_CHAR_TO_GANG (tank3d, armygang)
+SET army_1 = 1
+ENDIF
+ENDWHILE
+//Открыть ворота
+WHILE (army_1=1)
+IF (IS_ITEM_ONSCREEN  (army2c))
+OPEN_DOOR (neutral_mission_antitank_door)
+Set army_1=2
+ENDIF
+ENDWHILE
+
+// Подожди троих военных
+WHILE (cargone=8)
+IF ( IS_CHARACTER_IN_CAR ( player, APC_army  ) )
+DISPLAY_brief (9011)
+CLOSE_DOOR (neutral_mission_antitank_door)
+SET_CHAR_THREAT_REACTION ( army1 , no_reaction ) 
+SET_CHAR_THREAT_REACTION ( army2 , no_reaction ) 
+SET_CHAR_THREAT_REACTION ( army3 , no_reaction ) 
+SET_CHAR_THREAT_REACTION ( army4 , no_reaction ) 
+SET_CHAR_THREAT_REACTION ( army5 , no_reaction ) 
+SET_CHAR_THREAT_REACTION ( army6 , no_reaction ) 
+SET_CHAR_THREAT_REACTION ( army8 , no_reaction ) 
+SET_CHAR_THREAT_REACTION ( army9 , no_reaction ) 
+SET_CHAR_THREAT_REACTION ( army10 , no_reaction ) 
+SET_CHAR_THREAT_REACTION ( army11 , no_reaction )
+SET_CHAR_THREAT_REACTION ( army12, no_reaction )
+
+SET_CHAR_THREAT_SEARCH ( army1 , no_threats )
+SET_CHAR_THREAT_SEARCH ( army2 , no_threats )
+SET_CHAR_THREAT_SEARCH ( army3 , no_threats )
+SET_CHAR_THREAT_SEARCH ( army4 , no_threats )
+SET_CHAR_THREAT_SEARCH ( army5 , no_threats )
+SET_CHAR_THREAT_SEARCH ( army6 , no_threats )
+SET_CHAR_THREAT_SEARCH ( army8 , no_threats )
+SET_CHAR_THREAT_SEARCH ( army9 , no_threats )
+SET_CHAR_THREAT_SEARCH ( army10 , no_threats )
+SET_CHAR_THREAT_SEARCH ( army11 , no_threats )
+SET_CHAR_THREAT_SEARCH ( army12 , no_threats )
+
+SET_CHAR_OBJECTIVE (army1, ENTER_CAR_AS_PASSENGER, APC_army)
+SET_CHAR_OBJECTIVE (army2, ENTER_CAR_AS_PASSENGER, APC_army)
+SET_CHAR_OBJECTIVE (army3, ENTER_CAR_AS_PASSENGER, APC_army)
+SET_CHAR_OBJECTIVE (army4, ENTER_CAR_AS_PASSENGER, APC_army)
+SET_CHAR_OBJECTIVE (army5, ENTER_CAR_AS_PASSENGER, APC_army)
+SET_CHAR_OBJECTIVE (army6, ENTER_CAR_AS_PASSENGER, APC_army)
+SET_CHAR_OBJECTIVE (army8, ENTER_CAR_AS_PASSENGER, APC_army)
+SET_CHAR_OBJECTIVE (army9, ENTER_CAR_AS_PASSENGER, APC_army)
+SET_CHAR_OBJECTIVE (army10, ENTER_CAR_AS_PASSENGER, APC_army)
+SET_CHAR_OBJECTIVE (army11, ENTER_CAR_AS_PASSENGER, APC_army)
+SET_CHAR_OBJECTIVE (army12, ENTER_CAR_AS_PASSENGER, APC_army)
+SET cargone=9
+GIVE_WEAPON (player, grenade, 10)
+GIVE_WEAPON (player, rocket_launcher, 10)
+GIVE_WEAPON (player, machine_gun, 30)
+GIVE_WEAPON (player, molotov, 10)
+ENDIF
+ENDWHILE
+
+// Если взял троих, езжай на фабрику
+WHILE (cargone=9)
+IF   (CHECK_PASSENGER_COUNT  (APC_army, 3))
+haha1 = CREATE_SOUND (24.5, 6.5, 2.0) SMUG_LAUGH PLAY_INSTANT END
+POINT_ARROW_AT (APC_arrow, 38.5, 31.5, 2.0)
+CHANGE_POLICE_LEVEL  ( 4 )
+DELETE_ITEM (army1c)
+DELETE_ITEM (army2c)
+DELETE_ITEM (army3c) 
+DELETE_ITEM (army4c) 
+DELETE_ITEM (army5c) 
+DELETE_ITEM (army6c) 
+DELETE_ITEM (army7c) 
+DELETE_ITEM (army8c)
+SET cargone=10
+DISPLAY_BRIEF (9012)
+ENDIF
+ENDWHILE
+
+// Уничтожь БТР!
+WHILE (cargone=10)
+IF  (IS_CAR_IN_BLOCK (APC_army, 38.5, 31.5, 2.0))
+CHANGE_GANG_CHAR_RESPECT (armygang, player, 3)
+REMOVE_ARROW (APC_arrow)
+DISPLAY_brief (9013)
+ORDER_DRIVER_OUT_CAR (player)
+SET_CAR_ROCKETPROOF  (  APC_army   ,  OFF  )
+SET_CAR_BULLETPROOF  (  APC_army  ,  OFF  )
+army_in_trap = CREATE_SOUND (38.5, 31.5, 2.0) GANG_DUMPED PLAY_FOREVER END
+CHANGE_CAR_LOCK ( APC_army , locked ) 
+SET cargone=12
+ENDIF
+ENDWHILE
+
+// Возвращайся к джипу
+WHILE (cargone=12)
+IF (CHECK_CAR_WRECKED_IN_AREA (APC_army, 38.5, 31.5, 2.5, 3.0, 1.0))
+POINT_ARROW_AT (cargone2_arrow, bratocar)
+DELETE_ITEM (army_in_trap)
+DISPLAY_BRIEF (9014)
+SET cargone=13
+ENDIF
+ENDWHILE
+
+// Вези джип на фабрику, мы обследуем его.
+WHILE (cargone=13)
+IF (IS_CHARACTER_IN_CAR (player, bratocar))
+REMOVE_ARROW (cargone2_arrow)
+OPEN_DOOR (neutral_mission_park_door)
+POINT_ARROW_AT (factory_end_arrow, 33.5, 31.5, 2.0)
+set cargone=14
+ENDIF
+ENDWHILE
+
+WHILE (cargone=14)
+IF (IS_CAR_IN_BLOCK (bratocar, 32.5, 31.5, 2.0))
+CLOSE_DOOR (neutral_mission_park_door)
+WARP_FROM_CAR_TO_POINT (player, 34.5, 31.5, 2.0, 90)
+REMOVE_ARROW (factory_end_arrow)
+set cargone=15
+ADD_MULTIPLIER (player, 1)
+ADD_SCORE (player, 50000)
+SET flag_passed_neutral_mission = 1
+DISPLAY_MESSAGE (3100)
+DISPLAY_BRIEF (9015)
+CHANGE_GANG_CHAR_RESPECT_AND_UPDATE (neutralgang, player, 1)
+CLEAR_WANTED_LEVEL (player)
+SET_PHONE_DEAD (phone_neutral)
+DELETE_ITEM (APC_army)
+DELETE_ITEM (bratocar)
+DISABLE_THREAD_TRIGGER (neutral_mission)
+RETURN
+ENDIF
+ENDWHILE
+
+clean_up_neutral_mission: 
+REMOVE_ARROW (cargone_arrow)
+REMOVE_ARROW (carpark_arrow)
+REMOVE_ARROW (APC_arrow)
+DELETE_ITEM (swat1)DELETE_ITEM (swat2)DELETE_ITEM (swat3)DELETE_ITEM (swat4)DELETE_ITEM (swat5)DELETE_ITEM (swatleader)DELETE_ITEM (bratocar)
+DELETE_ITEM (army2)DELETE_ITEM (army3)DELETE_ITEM (army4)DELETE_ITEM (army5)DELETE_ITEM (army6)DELETE_ITEM (army8)DELETE_ITEM (army9)DELETE_ITEM (army10)DELETE_ITEM (army11)DELETE_ITEM (army12)DELETE_ITEM (army1c)DELETE_ITEM (army2c)
+DELETE_ITEM (army3c)DELETE_ITEM (army4c)DELETE_ITEM (army5c)DELETE_ITEM (army6c)DELETE_ITEM (army7c)DELETE_ITEM (army8c)DELETE_ITEM (APC_army)
+DELETE_ITEM (APC_army)
+DELETE_ITEM (army_in_trap)
+DELETE_ITEM (APC_army)
+
+IF (flag_passed_neutral_mission = 1)
+++ flag_neutral_missions_passed
+++ flag_all_missions_passed
+IF (flag_neutral_missions_passed = 1)
+DISPLAY_BRIEF (9016)
+DISPLAY_MESSAGE (9020)
+ENDIF
+ENDIF
+IF (flag_failed_neutral_mission = 1)
+++ flag_neutral_missions_failed
+++ flag_all_missions_failed
+CHANGE_GANG_CHAR_RESPECT_AND_UPDATE (neutralgang, player, -1)
+CLEAR_WANTED_LEVEL (player)
+CLEAR_ALL_BRIEFS ( )
+ENDIF
+IF (CHECK_DEATHARREST_EXECUTED ())
+++ flag_neutral_missions_failed
+++ flag_all_missions_failed
+CHANGE_GANG_CHAR_RESPECT_AND_UPDATE (neutralgang, player, -1)
+ENDIF
+
+MISSION_HAS_FINISHED ( ) 
+SET flag_on_mission= 0
+SET flag_on_neutral_mission = 0
+RETURN
+
+MISSIONSTART
+
+	GOSUB neutral_mission:
+                GOSUB clean_up_neutral_mission: 
+	
+
+MISSIONEND 
+

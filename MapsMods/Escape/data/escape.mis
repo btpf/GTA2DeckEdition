@@ -1,0 +1,1107 @@
+PLAYER_PED player = ( 14.6 , 12.5 , 255.0 ) 22 1
+
+PARKED_CAR_DATA parked_car_1 = ( 23.9 , 14.4 ) -1 315 copcar
+PARKED_CAR_DATA parked_car_2 = ( 22.7 , 12.0 ) -1 225 copcar
+PARKED_CAR_DATA parked_car_3 = ( 23.1 , 9.5 ) -1 270 firetruk
+
+PARKED_CAR_DATA parked_car_4 = ( 23.1 , 73.5 ) 9 45 gt24640   // bsilver
+PARKED_CAR_DATA parked_car_5 = ( 24.2 , 71.5 ) 10 135 stratos // byellow
+PARKED_CAR_DATA parked_car_6 = ( 22.0 , 73.5 ) 3 45 stratosb  // blue
+PARKED_CAR_DATA parked_car_7 = ( 23.1 , 71.5 ) 18 135 wbtwin  // drust
+PARKED_CAR_DATA parked_car_8 = ( 24.2 , 73.5 ) 20 45 zcx5     // green
+PARKED_CAR_DATA parked_car_9 = ( 22.0 , 71.5 ) 6 135 t2000gt  // britered
+
+PARKED_CAR_DATA parked_car_10 = ( 66.5 , 69.7 ) -1 135 gunjeep
+PARKED_CAR_DATA parked_car_11 = ( 67.6 , 70.0 ) -1 135 swatvan
+PARKED_CAR_DATA parked_car_12 = ( 66.5 , 76.0 ) -1 45 apc
+PARKED_CAR_DATA parked_car_13 = ( 67.7 , 76.0 ) -1 45 tank
+
+PARKED_CAR_DATA parked_car_14 = ( 37.5 , 119.2 ) 34 45 jeffrey  // whiter
+PARKED_CAR_DATA parked_car_15 = ( 39.5 , 116.6 ) 27 225 xk120   // purple
+PARKED_CAR_DATA parked_car_16 = ( 54.5 , 117.5 ) 25 45 stingray // paleblue
+
+PARKED_CAR_DATA parked_car_17 = ( 84.5 , 129.5 ) -1 90 medicar
+
+PARKED_CAR_DATA parked_car_18 = ( 144.3 , 86.4 ) -1 315 towtruck
+PARKED_CAR_DATA parked_car_19 = ( 149.5 , 82.5 ) -1 135 buick
+PARKED_CAR_DATA parked_car_20 = ( 140.6 , 82.6 ) 30 225 pickup
+PARKED_CAR_DATA parked_car_21 = ( 143.0 , 30.4 ) -1 270 tank
+
+GENERATOR generator_machinegun_1 = ( 6.0 , 7.0 ) 0 COLLECT_01 1200 1200 25
+GENERATOR generator_cocktails_1 = ( 21.0 , 51.0 ) 0 COLLECT_04 1200 1200 15
+GENERATOR generator_shotgun_1 = ( 5.0 , 8.0 ) 0 COLLECT_06 1200 1200 25
+GENERATOR generator_electrogun_1 = ( 28.0 , 51.0 ) 0 COLLECT_03 1200 1200 25
+GENERATOR generator_dual_pistol_1 = ( 32.0 , 30.0 ) 0 COLLECT_10 1200 1200 25
+GENERATOR generator_flame_1 = ( 71.5 , 70.5 ) 0 COLLECT_08 1200 1200 30
+GENERATOR generator_rocket_1 = ( 71.5 , 75.5 ) 0 COLLECT_02 1500 1500 20
+GENERATOR generator_silenced_mg_1 = ( 64.5 , 88.5 ) 0 COLLECT_09 1200 1200 25
+GENERATOR generator_invisibility_1 = ( 50.5 , 117.5 ) 0 COLLECT_39 1200 1200
+GENERATOR generator_armour_1 = ( 64.3 , 87.3 ) 0 COLLECT_31 2000 2000
+GENERATOR generator_grenade_1 = ( 89.5 , 126.5 ) 0 COLLECT_05 1200 1200
+GENERATOR generator_jail_free_1 = ( 89.5 , 132.5 ) 0 COLLECT_32 2000 2000
+GENERATOR generator_car_bomb_1 = ( 47.5 , 44.5 ) 0 COLLECT_15 1800 1800
+GENERATOR generator_life_up_1 = ( 70.5 , 72.5 ) 0 COLLECT_29 2000 2000
+GENERATOR generator_dbl_fire_1 = ( 70.5 , 73.5 ) 0 COLLECT_36 2000 2000
+GENERATOR generator_car_mg_1 = ( 5.5 , 175.5 ) 0 COLLECT_18 1500 1500
+GENERATOR generator_car_mines_1 = ( 52.5 , 132.5 ) 0 COLLECT_17 1500 1500
+GENERATOR generator_shotgun_2 = ( 33.0 , 31.0 ) 0 COLLECT_06 1200 1200 25
+GENERATOR generator_silenced_mg_2 = ( 121.5 , 151.5 ) 0 COLLECT_09 1200 1200 25
+GENERATOR generator_health_1 = ( 51.5 , 117.5 ) 0 COLLECT_30 1200 1200
+GENERATOR generator_dbl_damage_1 = ( 50.5 , 118.5 ) 0 COLLECT_35 1200 1200
+GENERATOR generator_electrify_1 = ( 51.5 , 118.5 ) 0 COLLECT_37 1200 1200
+GENERATOR generator_armour_2 = ( 157.5 , 113.5 ) 0 COLLECT_31 1200 1200
+GENERATOR generator_flame_2 = ( 157.5 , 112.5 ) 0 COLLECT_08 1200 1200 30
+GENERATOR generator_pistal_1 = ( 3.5 , 32.5 ) 0 COLLECT_00 1200 1200 15
+GENERATOR generator_electrogun_2 = ( 85.5 , 25.5 ) 0 COLLECT_03 1200 1200 25
+GENERATOR generator_grenade_2 = ( 85.5 , 26.5 ) 0 COLLECT_05 1200 1200
+
+GENERATOR generator_multiply_e = ( 10.5 , 11.5 ) 0 COLLECT_28 2000 2000
+GENERATOR generator_life_up_e = ( 8.5 , 9.5 ) 0 COLLECT_29 2000 2000
+GENERATOR generator_health_e = ( 6.5 , 7.5 ) 0 COLLECT_30 2000 2000
+GENERATOR generator_armour_e = ( 6.5 , 9.5 ) 0 COLLECT_31 2000 2000
+GENERATOR generator_jail_free_e = ( 8.5 , 11.5 ) 0 COLLECT_32 2000 2000
+GENERATOR generator_dbl_damage_e = ( 8.5 , 7.5 ) 0 COLLECT_35 2000 2000
+GENERATOR generator_dbl_fire_e = ( 10.5 , 9.5 ) 0 COLLECT_36 2000 2000
+GENERATOR generator_electrify_e = ( 10.5 , 7.5 ) 0 COLLECT_37 2000 2000
+GENERATOR generator_invisibility_e = ( 6.5 , 11.5 ) 0 COLLECT_39 2000 2000
+
+GENERATOR generator_pistol_e = ( 91.5 , 37.5 ) 0 COLLECT_00 2000 2000
+GENERATOR generator_dblpistol_e = ( 91.5 , 39.5 ) 0 COLLECT_10 2000 2000
+GENERATOR generator_shotgun_e = ( 89.5 , 39.5 ) 0 COLLECT_06 2000 2000
+GENERATOR generator_lctrcgun_e = ( 89.5 , 37.5 ) 0 COLLECT_03 2000 2000
+GENERATOR generator_mg_e = ( 87.5 , 39.5 ) 0 COLLECT_01 2000 2000
+GENERATOR generator_smg_e = ( 87.5 , 37.5 ) 0 COLLECT_09 2000 2000
+GENERATOR generator_molotov_e = ( 97.5 , 28.5 ) 0 COLLECT_04 2000 2000
+GENERATOR generator_grenade_e = ( 97.5 , 30.5 ) 0 COLLECT_05 2000 2000
+GENERATOR generator_flame_e = ( 92.5 , 28.5 ) 0 COLLECT_08 2000 2000
+GENERATOR generator_rocket_e = ( 90.5 , 28.5 ) 0 COLLECT_02 2000 2000
+
+GENERATOR generator_oil_e = ( 33.5 , 134.5 ) 0 COLLECT_16 2000 2000
+GENERATOR generator_mines_e = ( 33.5 , 136.5 ) 0 COLLECT_17 2000 2000
+GENERATOR generator_carmg_e = ( 33.5 , 138.5 ) 0 COLLECT_18 2000 2000
+GENERATOR generator_bomb_e = ( 33.5 , 140.5 ) 0 COLLECT_15 2000 2000
+
+CAR_DATA mission_1_car
+CAR_DATA mission_2_car
+CAR_DATA mission_3_car
+CAR_DATA mission_3b_car
+CAR_DATA mission_3c_car
+CAR_DATA mission_4_car
+CAR_DATA mission_4b_car
+CAR_DATA end_lev_car
+CAR_DATA end_lev_1
+CAR_DATA end_lev_2
+CAR_DATA end_lev_3
+CAR_DATA end_lev_4
+CAR_DATA end_lev_5
+CAR_DATA end_lev_6
+CAR_DATA end_lev_7
+CAR_DATA end_lev_8
+CAR_DATA end_lev_9
+CAR_DATA end_lev_10
+
+CHAR_DATA nsync1
+CHAR_DATA nsync2
+CHAR_DATA nsyncbf
+CHAR_DATA nsync3
+
+CRANE_DATA crane_1 = ( 28.5 , 191.5 ) 200 NO_HOMECRANE FIRST ( 30.5 , 193.5 ) 180  SECOND  ( 25.5 , 192.5 ) 270
+CRANE_DATA crane_2 = ( 39.5 , 195.5 ) 0 NO_HOMECRANE FIRST ( 42.5 , 194.5 ) 270
+
+
+CRUSHER crusher_1 = ( 30.5 , 193.5 )
+
+OBJ_DATA sprayshop_1 = ( 34.5 , 8.5 , 1.0 ) 0 car_shop 9
+OBJ_DATA bombshop_1 = ( 34.5 , 10.5 , 1.0 ) 0 car_shop bomb_shop
+OBJ_DATA machinegunshop_1 = ( 34.5 , 12.5 , 1.0 ) 0 car_shop machinegun_shop
+
+OBJ_DATA blockade_1 = ( 21.4 , 28.5 ) 0 ROADBLOCK 1
+OBJ_DATA blockade_2 = ( 22.6 , 28.5 ) 0 ROADBLOCK 1
+OBJ_DATA cone_1 = ( 22.0 , 28.5 ) 0 CONE 1
+OBJ_DATA blockade_3 = ( 36.4 , 64.5 ) 0 ROADBLOCK 1
+OBJ_DATA blockade_4 = ( 37.6 , 64.5 ) 0 ROADBLOCK 1
+OBJ_DATA cone_2 = ( 37.0 , 64.5 ) 0 CONE 1
+
+DECLARE_POLICELEVEL ( 5 )
+
+SET_STATION_INFO ( trak00, 2, 0, 1 )
+SET_STATION_INFO ( trak01, NO_TRAIN )
+
+SAVED_COUNTER gameloop = 1
+SAVED_COUNTER loop2 = 1
+SAVED_COUNTER flag_on_mission = 0
+SAVED_COUNTER ready_to_go = 0
+SAVED_COUNTER told_get_in_car = 0
+SAVED_COUNTER told_get_in_car_2 = 0
+SAVED_COUNTER told_get_in_car_3 = 0
+SAVED_COUNTER nsync_1_in_car = 0
+SAVED_COUNTER told_damage = 0
+SAVED_COUNTER nsync_2_in_car = 0
+SAVED_COUNTER nsync_bf_in_car = 0
+SAVED_COUNTER bf_in_car = 0
+SAVED_COUNTER ready_to_go2 = 0
+SAVED_COUNTER char_ready = 0
+SAVED_COUNTER char_ready2 = 0
+SAVED_COUNTER char_ready3 = 0
+SAVED_COUNTER msdone = 0
+SAVED_COUNTER lev_done = 0
+SAVED_COUNTER lev_done2 = 0
+SAVED_COUNTER all_ready = 0
+
+FORWARD answer_phone_1:
+FORWARD answer_phone_2:
+FORWARD answer_phone_3:
+FORWARD answer_phone_4:
+
+OBJ_DATA phone_1  =  ( 25.5  , 53.5 , 255.0 )  90  phone
+OBJ_DATA phone_2  =  ( 24.5  , 53.5 , 255.0 )  90  phone
+OBJ_DATA phone_3  =  ( 35.5  , 116.5 , 255.0 )  90  phone
+OBJ_DATA phone_4  =  ( 141.5  , 91.3 , 255.0 )  180  phone
+
+ARROW_DATA mission_1
+ARROW_DATA mission_2
+ARROW_DATA mission_2_b
+ARROW_DATA mission_2_a
+ARROW_DATA mission_3
+ARROW_DATA mission_3b
+ARROW_DATA mission_3c
+ARROW_DATA mission_3d
+ARROW_DATA mission_4
+ARROW_DATA mission_4b
+ARROW_DATA mission_4c
+ARROW_DATA mission_4d
+ARROW_DATA mission_4e
+ARROW_DATA mission_4f
+ARROW_DATA end_lev_arrow
+
+THREAD_TRIGGER thread_phone_1 = THREAD_WAIT_FOR_ANSWER_PHONE ( player , phone_1 , answer_phone_1: )
+
+THREAD_TRIGGER thread_phone_2 = THREAD_WAIT_FOR_ANSWER_PHONE ( player , phone_2 , answer_phone_2: )
+
+THREAD_TRIGGER thread_phone_3 = THREAD_WAIT_FOR_ANSWER_PHONE ( player , phone_3 , answer_phone_3: )
+
+THREAD_TRIGGER thread_phone_4 = THREAD_WAIT_FOR_ANSWER_PHONE ( player , phone_4 , answer_phone_4: )
+
+
+
+
+						// ........MISSION 1..........
+
+answer_phone_1:
+
+IF ( flag_on_mission = 1 ) 
+	DISPLAY_BRIEF ( 1140 )			// DISPLAY: ALREADY ON MISSION
+	RETURN
+ENDIF
+
+SET flag_on_mission = 1
+DISPLAY_BRIEF ( 1132 )				// DISPLAY: DESTROY LIMO AT HOTEL...
+mission_1_car = CREATE_CAR ( 46.4 , 95.0 ) 9 0 limo END
+GIVE_CAR_ALARM  ( mission_1_car ) 
+POINT_ARROW_AT ( mission_1, mission_1_car )
+
+
+WHILE ( NOT (IS_CAR_WRECKED ( mission_1_car ) ) )
+DO_NOWT
+ENDWHILE
+
+REMOVE_ARROW ( mission_1 )
+DISPLAY_MESSAGE ( 1124 )
+DISPLAY_BRIEF ( 1133 )				// DISPLAY: GOOD JOB.
+ADD_SCORE ( player , 20000 )
+SET flag_on_mission = 0
+++ msdone
+SET_PHONE_DEAD ( phone_1 )
+
+RETURN
+
+
+
+						// ........MISSION 2..........
+
+answer_phone_2:
+
+IF ( flag_on_mission = 1 ) 
+	DISPLAY_BRIEF ( 1140 )			// DISPLAY: ALREADY ON MISSION
+	RETURN
+ENDIF
+
+SET flag_on_mission = 1
+DISPLAY_BRIEF ( 1135 )				// DISPLAY: GO GET IN CAR  
+mission_2_car = CREATE_CAR ( 6.7 , 37.4 ) 26 315 bmw END
+POINT_ARROW_AT ( mission_2, mission_2_car )
+
+WHILE ( NOT ( IS_CHARACTER_IN_CAR ( player , mission_2_car ) ) )
+
+IF (IS_CAR_WRECKED ( mission_2_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_2 )
+	RETURN
+ENDIF
+
+
+ENDWHILE
+
+						// PLAYER GETS IN CAR
+REMOVE_ARROW ( mission_2 )
+POINT_ARROW_AT ( mission_2_a, 12.5 , 31.5 , 0.0 )
+DISPLAY_BRIEF ( 1137 )				// DISPLAY: HONK THE HORN
+
+WHILE ( NOT ( ready_to_go = 1 ) )
+
+IF ( ( IS_CAR_IN_BLOCK ( mission_2_car , 12.5 , 31.5 , 0.0 , 1.0 , 1.0 ) ) AND ( IS_CHAR_PRESSING_HORN  ( player ) ) )
+	SET ready_to_go = 1
+ENDIF
+
+IF ( ( told_get_in_car = 0 ) AND ( NOT ( IS_CHARACTER_IN_CAR  ( player , mission_2_car ) ) ) )
+	DISPLAY_BRIEF ( 1167 )			// DISPLAY: GET BACK IN THE CAR
+	SET told_get_in_car = 1
+ENDIF
+
+IF (IS_CAR_WRECKED ( mission_2_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	REMOVE_ARROW ( mission_2_a )
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+
+ENDWHILE
+						// PLAYER HONKS HORN IN CORRECT POS.
+REMOVE_ARROW ( mission_2_a )
+DISPLAY_BRIEF ( 1170 )				// DISPLAY: HERE HE COMES 
+
+nsync1 = CREATE_CHAR ( 13.5 , 32.5 ) 29 270 DUMMY END
+SET_CHAR_OBJECTIVE ( nsync1 , ENTER_CAR_AS_PASSENGER , mission_2_car )
+SET_CHAR_THREAT_SEARCH ( nsync1 , NO_THREATS )
+
+WHILE ( NOT ( nsync_1_in_car = 1 ) )
+
+IF (IS_CAR_WRECKED ( mission_2_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+IF ( HAS_CHARACTER_DIED ( nsync1 ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1171 )			// MISSION FAILED IF CHAR. DEAD
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+IF ( IS_CHARACTER_IN_CAR ( nsync1 , mission_2_car ) )
+	SET nsync_1_in_car = 1
+ENDIF
+
+
+
+ENDWHILE
+
+DISPLAY_BRIEF ( 1139 )				// DISPLAY: TIME TO CRUSH HIM
+
+POINT_ARROW_AT ( mission_2_b, crane_1 )
+
+
+WHILE ( NOT ( IS_CAR_CRUSHED ( mission_2_car ) ) )
+
+IF ( IS_CAR_WRECKED ( mission_2_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_2_b )
+	RETURN
+ENDIF
+
+
+
+ENDWHILE
+
+REMOVE_ARROW ( mission_2_b )
+DISPLAY_MESSAGE ( 1124 )
+DISPLAY_BRIEF ( 1141 )				// DISPLAY: DIE SCUMBAG
+ADD_SCORE ( player , 30000 )
+SET flag_on_mission = 0
+++ msdone
+SET_PHONE_DEAD ( phone_2 )
+
+RETURN
+
+
+
+
+answer_phone_3:					// ........MISSION 3.........
+
+IF ( flag_on_mission = 1 ) 
+	DISPLAY_BRIEF ( 1140 )			// DISPLAY: ALREADY ON MISSION
+	RETURN
+ENDIF
+
+SET flag_on_mission = 1
+mission_3b_car = CREATE_CAR ( 67.5 , 131.5 ) 21 90 TRUKTRNS END
+mission_3_car = CREATE_CAR ( 67.5 , 132.5 ) 15 180 t2000gt END
+PUT_CAR_ON_TRAILER  ( mission_3_car , mission_3b_car )
+mission_3c_car = CREATE_CAR ( 69.7 , 131.5 ) 21 90 TRUKCAB1 END
+POINT_ARROW_AT ( mission_3, mission_3c_car )
+DISPLAY_BRIEF ( 1142 )				// DISPLAY: GET TRUCKCAB
+
+
+WHILE ( NOT ( IS_TRAILER_ATTACHED  ( mission_3c_car , mission_3b_car ) ) )
+
+
+IF ( IS_CAR_WRECKED ( mission_3c_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_3 )
+	RETURN
+ENDIF
+
+IF ( IS_CAR_WRECKED ( mission_3_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_3 )
+	RETURN
+ENDIF
+
+
+ENDWHILE
+
+REMOVE_ARROW ( mission_3 )
+DISPLAY_BRIEF ( 1143 )				// DISPLAY: GET CAR OFF TRAILER
+POINT_ARROW_AT ( mission_3b, crane_2 )
+
+
+
+WHILE ( IS_CAR_ON_TRAILER (  mission_3_car , mission_3b_car ) )
+
+
+IF ( IS_CAR_WRECKED ( mission_3c_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_3b )
+	RETURN
+ENDIF
+
+IF ( IS_CAR_WRECKED ( mission_3_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_3b )
+	RETURN
+ENDIF
+
+
+ENDWHILE
+
+
+REMOVE_ARROW ( mission_3b )
+DISPLAY_BRIEF ( 1144 )				// DISPLAY: GOTO BOMBSHOP
+POINT_ARROW_AT ( mission_3c, bombshop_1 )
+ADD_SCORE ( player , 5000 )
+
+
+WHILE ( NOT ( HAS_CAR_GOT_WEAPON  ( mission_3_car , CAR_BOMB ) ) )
+
+
+IF ( ( told_damage = 0 ) AND ( CHECK_CAR_DAMAGE_LEVEL ( mission_3_car , 3 ) ) )
+	DISPLAY_BRIEF ( 1146 )			// WARNING IF CAR DAMAGED 3
+	SET told_damage = 1
+ENDIF
+
+IF ( CHECK_CAR_DAMAGE_LEVEL ( mission_3_car , 7 ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1147 )			// MISSION FAILED IF CAR DAMAGED 7
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_3c )
+	RETURN
+ENDIF
+
+IF ( HAS_CAR_JUST_SUNK ( mission_3_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1147 )			// MISSION FAILED IF CAR SANK
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_3c )
+	RETURN
+ENDIF
+
+
+ENDWHILE
+
+REMOVE_ARROW ( mission_3c )
+DISPLAY_BRIEF ( 1145 )				// DISPLAY: DELIVER THE CAR
+POINT_ARROW_AT ( mission_3d, 36.5, 107.5, 0.0 )
+
+WHILE ( NOT ( IS_CAR_IN_BLOCK ( mission_3_car , 36.5 , 107.5 , 0.0 , 1.0 , 1.0 ) ) )
+
+IF ( ( told_damage = 0 ) AND ( CHECK_CAR_DAMAGE_LEVEL ( mission_3_car , 3 ) ) )
+	DISPLAY_BRIEF ( 1146 )			// WARNING IF CAR DAMAGED 3
+	SET told_damage = 1
+ENDIF
+
+IF ( CHECK_CAR_DAMAGE_LEVEL ( mission_3_car , 7 ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1147 )			// MISSION FAILED IF CAR DAMAGED 7
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_3d )
+	RETURN
+ENDIF
+
+IF ( HAS_CAR_JUST_SUNK ( mission_3_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1147 )			// MISSION FAILED IF CAR SANK
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_3c )
+	RETURN
+ENDIF
+
+
+ENDWHILE
+
+
+REMOVE_ARROW ( mission_3d )
+DISPLAY_BRIEF ( 1148 )				// DISPLAY: GET OUTTA THE CAR
+
+WHILE ( IS_CHARACTER_IN_CAR ( player , mission_3_car ) )
+
+DO_NOWT
+
+ENDWHILE
+
+nsync2 = CREATE_CHAR ( 38.5 , 100.5 ) 29 0 DUMMY END
+SET_CHAR_OBJECTIVE ( nsync2 , ENTER_CAR_AS_PASSENGER , mission_3_car )
+SET_CHAR_THREAT_SEARCH ( nsync2 , NO_THREATS )
+
+nsyncbf = CREATE_CHAR ( 39.5 , 100.5 ) 32 0 DUMMY END
+SET_CHAR_OBJECTIVE ( nsyncbf , ENTER_CAR_AS_PASSENGER , mission_3_car )
+SET_CHAR_THREAT_SEARCH ( nsyncbf , NO_THREATS )
+
+
+WHILE ( NOT ( nsync_bf_in_car = 1 ) )
+
+
+IF (IS_CAR_WRECKED ( mission_3_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+IF ( HAS_CHARACTER_DIED ( nsync2 ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1171 )			// MISSION FAILED IF CHAR. DEAD
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+IF ( HAS_CHARACTER_DIED ( nsyncbf ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1171 )			// MISSION FAILED IF CHAR. DEAD
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+IF ( IS_CHARACTER_IN_CAR ( nsync2 , mission_3_car ) )
+	SET nsync_2_in_car = 1
+ENDIF
+
+IF ( IS_CHARACTER_IN_CAR ( nsyncbf , mission_3_car ) )
+	SET bf_in_car = 1
+
+IF ( ( bf_in_car = 1 ) AND ( nsync_2_in_car = 1 ) )
+	SET nsync_bf_in_car = 1
+ENDIF
+
+
+ENDIF
+
+
+ENDWHILE
+
+
+EXPLODE ( mission_3_car )
+DISPLAY_MESSAGE ( 1124 )
+DISPLAY_BRIEF ( 1149 )				// DISPLAY: mission complete
+ADD_SCORE ( player , 65000 )
+SET flag_on_mission = 0
+++ msdone
+SET_PHONE_DEAD ( phone_3 )
+
+RETURN
+
+
+
+
+						// ........MISSION 4..........
+
+answer_phone_4:
+
+IF ( flag_on_mission = 1 ) 
+	DISPLAY_BRIEF ( 1140 )			// DISPLAY: ALREADY ON MISSION
+	RETURN
+ENDIF
+
+SET flag_on_mission = 1
+
+DISPLAY_BRIEF ( 1161 )				// DISPLAY: GET A COP CAR
+DISPLAY_BRIEF ( 1163 )				// DISPLAY: GET A COP CAR
+
+WHILE ( NOT ( char_ready = 1 ) )
+
+STORE_CAR_CHARACTER_IS_IN ( player , mission_4_car )
+
+IF ( CHECK_CAR_MODEL ( mission_4_car , COPCAR ) )
+	SET char_ready = 1
+ENDIF
+
+ENDWHILE
+
+
+SET_CHAR_GRAPHIC_TYPE ( player , emerg_graphic , 0 )
+CLEAR_WANTED_LEVEL ( player )
+GIVE_WEAPON ( player , pistol )
+
+DISPLAY_BRIEF ( 1162 )				// DISPLAY: GOT UNIFORM
+
+POINT_ARROW_AT ( mission_4 , 118.5 , 131.5 , 1.0 )
+
+WHILE ( NOT ( IS_CAR_IN_BLOCK ( mission_4_car , 118.5 , 131.5 , 1.0 , 1.0 , 1.0 ) ) )
+
+IF ( IS_CAR_WRECKED ( mission_4_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	REMOVE_ARROW ( mission_4 )
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+ENDWHILE
+
+REMOVE_ARROW ( mission_4 )
+DISPLAY_BRIEF ( 1164 )				// DISPLAY: KNOCK ON DOOR
+POINT_ARROW_AT ( mission_4b , 121.5 , 133.5 , 1.0 )
+
+WHILE ( NOT ( char_ready2 = 1 ) )
+
+IF ( IS_CAR_WRECKED ( mission_4_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	REMOVE_ARROW ( mission_4b )
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+IF ( LOCATE_CHARACTER_ON_FOOT ( player , 121.5 , 133.5 , 2.0 , 0.5 , 0.5 ) )
+	SET char_ready2 = 1
+ENDIF
+
+ENDWHILE
+
+REMOVE_ARROW ( mission_4b )
+nsync3 = CREATE_CHAR ( 122.2 , 133.4 ) 30 0 DUMMY END
+SET_CHAR_OBJECTIVE ( nsync3 , WAIT_ON_FOOT )
+SET_CHAR_THREAT_SEARCH ( nsync3 , NO_THREATS )
+
+ADD_GROUP_TO_CHARACTER ( nsync3 , 0 )
+MAKE_NEW_LEADER_OF_GROUP ( nsync3 , player ) 
+
+DISPLAY_BRIEF ( 1165 )				// DISPLAY: GET IN COPCAR GOTO JAIL
+
+POINT_ARROW_AT ( mission_4c , 24.9 , 14.4 , 0.0 )
+
+WHILE ( NOT ( ( IS_CAR_IN_BLOCK ( mission_4_car , 24.9 , 14.4 , 0.0 , 0.7 , 0.7 ) ) AND ( IS_GROUP_IN_CAR ( player ) ) ) )
+
+IF ( IS_CAR_WRECKED ( mission_4_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	REMOVE_ARROW ( mission_4c )
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+IF ( HAS_CHARACTER_DIED ( nsync3 ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1171 )			// MISSION FAILED IF CHAR. DEAD
+	REMOVE_ARROW ( mission_4c )
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+ENDWHILE
+
+REMOVE_ARROW ( mission_4c )
+DISPLAY_BRIEF ( 1168 )				// DISPLAY: TAKE EM IN
+
+POINT_ARROW_AT ( mission_4d , 8.5 , 13.5 , 0.0 )
+
+WHILE ( NOT ( char_ready3 = 1 ) )
+
+IF ( ( LOCATE_CHARACTER_ON_FOOT ( player , 8.5 , 13.5 , 1.0 , 0.7 , 0.7 ) ) AND ( LOCATE_CHARACTER_ON_FOOT ( nsync3 , 8.5 , 13.5 , 1.0 , 0.7 , 0.7 ) ) )
+	SET char_ready3 = 1
+ENDIF
+
+IF ( HAS_CHARACTER_DIED ( nsync3 ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1171 )			// MISSION FAILED IF CHAR. DEAD
+	REMOVE_ARROW ( mission_4d )
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+ENDWHILE
+
+DESTROY_GROUP ( player )
+DELETE_ITEM  ( nsync3 )
+REMOVE_ARROW ( mission_4d )
+
+DISPLAY_BRIEF ( 1169 )				// DISPLAY: 	GET TANKER
+DISPLAY_BRIEF ( 1111 )				// DISPLAY: 	'	'
+mission_4b_car = CREATE_CAR ( 89.0 , 37.5 ) 0 270 BOXTRUCK END
+POINT_ARROW_AT ( mission_4e , mission_4b_car )
+
+WHILE ( NOT ( IS_CHARACTER_IN_CAR ( player , mission_4b_car ) ) )
+
+IF (IS_CAR_WRECKED ( mission_4b_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_4e )
+	RETURN
+ENDIF
+
+ENDWHILE
+
+REMOVE_ARROW ( mission_4e )
+DISPLAY_BRIEF ( 1112 )				// DISPLAY: 	  GET BOMB
+
+WHILE ( NOT ( HAS_CAR_GOT_WEAPON  ( mission_4b_car , CAR_BOMB ) ) )
+
+IF ( IS_CAR_WRECKED ( mission_4b_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+IF ( HAS_CAR_JUST_SUNK ( mission_4b_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR SANK
+	SET flag_on_mission = 0
+	RETURN
+ENDIF
+
+ENDWHILE
+
+DISPLAY_BRIEF ( 1113 )				// DISPLAY: 	  GOT BOMB
+POINT_ARROW_AT ( mission_4f , 13.6 , 9.0 , 0.0 )
+
+WHILE ( NOT ( IS_CAR_IN_BLOCK ( mission_4b_car , 13.6 , 9.0 , 0.0 , 0.7 , 0.7 ) ) )
+
+IF ( IS_CAR_WRECKED ( mission_4b_car ) )
+	DISPLAY_MESSAGE ( 1125 )
+	DISPLAY_BRIEF ( 1166 )			// MISSION FAILED IF CAR WRECKED
+	SET flag_on_mission = 0
+	REMOVE_ARROW ( mission_4f )
+	RETURN
+ENDIF
+
+ENDWHILE
+
+DISPLAY_BRIEF ( 1114 )				// DISPLAY: 	  detonate it
+REMOVE_ARROW ( mission_4f )
+
+WHILE ( NOT ( IS_CAR_WRECKED ( mission_4b_car ) ) )
+
+DO_NOWT
+
+ENDWHILE
+
+
+EXPLODE_LARGE ( 12.5 , 10.5 , 2.5 )
+
+//ramp
+REMOVE_BLOCK ( 10 , 10 , 5 , DONT_DROP )
+REMOVE_BLOCK ( 11 , 10 , 5 , DONT_DROP )
+REMOVE_BLOCK ( 10 , 11 , 5 , DONT_DROP )
+REMOVE_BLOCK ( 11 , 11 , 5 , DONT_DROP )
+EXPLODE_NO_RING ( 11.5 , 12.5 , 4.5 )
+REMOVE_BLOCK ( 10 , 12 , 6 , DONT_DROP )
+REMOVE_BLOCK ( 11 , 12 , 6 , DONT_DROP )
+REMOVE_BLOCK ( 10 , 12 , 5 , DONT_DROP )
+EXPLODE_NO_RING ( 11.2 , 12.3 , 5.7 )
+REMOVE_BLOCK ( 11 , 12 , 5 , DONT_DROP )
+REMOVE_BLOCK ( 10 , 13 , 6 , DONT_DROP )
+REMOVE_BLOCK ( 11 , 13 , 6 , DONT_DROP )
+
+LOWER_LEVEL ( 4 , 5 ) ( 12 , 12 )
+
+CHANGE_BLOCK TYPE ( 10 , 10 , 3 ) field 0
+CHANGE_BLOCK TYPE ( 11 , 10 , 3 ) field 0
+CHANGE_BLOCK TYPE ( 10 , 11 , 3 ) field 0
+CHANGE_BLOCK TYPE ( 11 , 11 , 3 ) field 0
+CHANGE_BLOCK TYPE ( 10 , 12 , 3 ) field 0
+CHANGE_BLOCK TYPE ( 11 , 12 , 3 ) field 0
+CHANGE_BLOCK LID ( 10 , 10 , 3 ) not_flat not_flip 0 0 429
+CHANGE_BLOCK LID ( 11 , 10 , 3 ) not_flat not_flip 0 0 429
+CHANGE_BLOCK LID ( 10 , 11 , 3 ) not_flat not_flip 0 0 429
+CHANGE_BLOCK LID ( 11 , 11 , 3 ) not_flat not_flip 0 0 429
+CHANGE_BLOCK LID ( 10 , 12 , 3 ) not_flat not_flip 0 180 433
+CHANGE_BLOCK LID ( 11 , 12 , 3 ) not_flat not_flip 0 180 433
+
+LOWER_LEVEL ( 4 , 5 ) ( 12 , 12 )
+EXPLODE_LARGE ( 10.5 , 6.5 , 2.5 )
+DELAY_HERE ( 3 )
+
+LOWER_LEVEL ( 4 , 13 ) ( 7 , 14 )
+EXPLODE_LARGE ( 6.5 , 9.5 , 3.2 )
+
+LOWER_LEVEL ( 4 , 5 ) ( 12 , 12 )
+EXPLODE_LARGE ( 12.5 , 10.5 , 2.5 )
+DELAY_HERE ( 3 )
+
+LOWER_LEVEL ( 4 , 13 ) ( 7 , 14 )
+EXPLODE_LARGE ( 5.5 , 12.5 , 2.6 )
+
+REMOVE_BLOCK ( 8 , 13 , 2 , DONT_DROP )
+LOWER_LEVEL ( 4 , 5 ) ( 12 , 12 )
+EXPLODE_LARGE ( 8.5 , 8.5 , 0.6 )
+EXPLODE_LARGE ( 12.7 , 11.8 , 0.7 )
+DELAY_HERE ( 3 )
+
+LOWER_LEVEL ( 4 , 13 ) ( 7 , 14 )
+EXPLODE_LARGE ( 6.5 , 9.5 , 0.6 )
+EXPLODE_LARGE ( 11.4 , 12.5 , 0.6 )
+CHANGE_BLOCK SIDE ( 4 , 15 , 1 ) TOP WALL BULLET not_flat not_flip 0 250
+CHANGE_BLOCK SIDE ( 6 , 15 , 1 ) TOP WALL BULLET not_flat not_flip 0 250
+
+CHANGE_BLOCK LID ( 4 , 5 , 0 ) not_flat not_flip 1 270 354
+CHANGE_BLOCK LID ( 5 , 5 , 0 ) not_flat not_flip 1 270 353
+CHANGE_BLOCK LID ( 6 , 5 , 0 ) not_flat not_flip 1 270 353
+CHANGE_BLOCK LID ( 7 , 5 , 0 ) not_flat not_flip 1 270 353
+CHANGE_BLOCK LID ( 8 , 5 , 0 ) not_flat not_flip 1 270 353
+CHANGE_BLOCK LID ( 9 , 5 , 0 ) not_flat not_flip 1 270 353
+CHANGE_BLOCK LID ( 10 , 5 , 0 ) not_flat not_flip 1 270 353
+CHANGE_BLOCK LID ( 11 , 5 , 0 ) not_flat not_flip 1 270 353
+CHANGE_BLOCK LID ( 12 , 5 , 0 ) not_flat not_flip 1 0 354
+EXPLODE_LARGE ( 12.2 , 10.5 , 0.3 )
+EXPLODE_LARGE ( 5.8 , 6.5 , 0.4 )
+
+CHANGE_BLOCK LID ( 4 , 6 , 0 ) not_flat not_flip 1 180 353
+CHANGE_BLOCK LID ( 5 , 6 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 6 , 6 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 7 , 6 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 8 , 6 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 9 , 6 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 10 , 6 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 11 , 6 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 12 , 6 , 0 ) not_flat not_flip 1 0 353
+EXPLODE_LARGE ( 6.5 , 6.5 , 3.2 )
+EXPLODE_LARGE ( 4.6 , 6.7 , 0.2 )
+
+CHANGE_BLOCK LID ( 4 , 7 , 0 ) not_flat not_flip 1 180 353
+CHANGE_BLOCK LID ( 5 , 7 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 6 , 7 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 7 , 7 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 8 , 7 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 9 , 7 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 10 , 7 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 11 , 7 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 12 , 7 , 0 ) not_flat not_flip 1 0 353
+EXPLODE_LARGE ( 8.5 , 7.5 , 0.6 )
+EXPLODE_LARGE ( 8.5 , 12.5 , 0.3 )
+
+CHANGE_BLOCK LID ( 4 , 8 , 0 ) not_flat not_flip 1 180 353
+CHANGE_BLOCK LID ( 5 , 8 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 6 , 8 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 7 , 8 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 8 , 8 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 9 , 8 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 10 , 8 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 11 , 8 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 12 , 8 , 0 ) not_flat not_flip 1 0 353
+
+CHANGE_BLOCK LID ( 4 , 9 , 0 ) not_flat not_flip 1 180 353
+CHANGE_BLOCK LID ( 5 , 9 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 6 , 9 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 7 , 9 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 8 , 9 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 9 , 9 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 10 , 9 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 11 , 9 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 12 , 9 , 0 ) not_flat not_flip 1 0 353
+EXPLODE_LARGE ( 11.5 , 9.5 , 2.5 )
+
+CHANGE_BLOCK LID ( 4 , 10 , 0 ) not_flat not_flip 1 180 353
+CHANGE_BLOCK LID ( 5 , 10 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 6 , 10 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 7 , 10 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 8 , 10 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 9 , 10 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 10 , 10 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 11 , 10 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 12 , 10 , 0 ) not_flat not_flip 1 0 353
+EXPLODE_LARGE ( 12.5 , 11.9 , 0.5 )
+
+CHANGE_BLOCK LID ( 4 , 11 , 0 ) not_flat not_flip 1 180 353
+CHANGE_BLOCK LID ( 5 , 11 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 6 , 11 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 7 , 11 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 8 , 11 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 9 , 11 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 10 , 11 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 11 , 11 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 12 , 11 , 0 ) not_flat not_flip 1 0 353
+EXPLODE_LARGE ( 5.5 , 12.5 , 2.6 )
+
+CHANGE_BLOCK LID ( 4 , 12 , 0 ) not_flat not_flip 1 180 353
+CHANGE_BLOCK LID ( 5 , 12 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 6 , 12 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 7 , 12 , 0 ) not_flat not_flip 1 0 355
+CHANGE_BLOCK LID ( 8 , 12 , 0 ) not_flat not_flip 1 90 353
+CHANGE_BLOCK LID ( 9 , 12 , 0 ) not_flat not_flip 1 90 353
+CHANGE_BLOCK LID ( 10 , 12 , 0 ) not_flat not_flip 1 90 353
+CHANGE_BLOCK LID ( 11 , 12 , 0 ) not_flat not_flip 1 90 353
+CHANGE_BLOCK LID ( 12 , 12 , 0 ) not_flat not_flip 1 90 354
+EXPLODE_NO_RING ( 6.5 , 13.5 , 0.4 )
+EXPLODE_LARGE ( 12.5 , 12.5 , 0.6 )
+
+CHANGE_BLOCK LID ( 4 , 13 , 0 ) not_flat not_flip 1 180 353
+CHANGE_BLOCK LID ( 5 , 13 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 6 , 13 , 0 ) not_flat not_flip 1 0 352
+CHANGE_BLOCK LID ( 7 , 13 , 0 ) not_flat not_flip 1 0 353
+EXPLODE_NO_RING ( 7.9 , 13.0 , 0.4 )
+EXPLODE_LARGE ( 9.8 , 12.7 , 0.2 )
+
+CHANGE_BLOCK LID ( 4 , 14 , 0 ) not_flat not_flip 1 180 354
+CHANGE_BLOCK LID ( 5 , 14 , 0 ) not_flat not_flip 1 90 353
+CHANGE_BLOCK LID ( 6 , 14 , 0 ) not_flat not_flip 1 90 353
+CHANGE_BLOCK LID ( 7 , 14 , 0 ) not_flat not_flip 1 90 354
+
+SWITCH_GENERATOR ( generator_machinegun_1 , OFF )
+SWITCH_GENERATOR ( generator_shotgun_1 , OFF )
+
+ 
+DELAY_HERE ( 3 )
+EXPLODE_NO_RING ( 5.5 , 5.5 , 0.7 )
+EXPLODE_NO_RING ( 6.5 , 6.5 , 0.9 )
+EXPLODE_NO_RING ( 7.5 , 7.5 , 0.4 )
+EXPLODE_NO_RING ( 9.5 , 11.5 , 0.6 )
+EXPLODE_NO_RING ( 11.5 , 13.5 , 0.2 )
+
+DISPLAY_MESSAGE ( 1124 )
+DISPLAY_BRIEF ( 1115 )				// DISPLAY: 	  GOOD JOB
+
+ALTER_WANTED_LEVEL_NO_DROP ( player , 1 )
+SET flag_on_mission = 0
+++ msdone
+SET_PHONE_DEAD ( phone_4 )
+ADD_SCORE ( player , 95000 )
+
+RETURN
+
+
+
+LEVELSTART
+
+SET_AMBIENT_LEVEL ( 0.5 , 0 )
+REMOVE_WEAPONS ( player )
+
+CHAR_DATA nmate1 = ( 11.8 , 14.6 ) 22 315 DUMMY
+SET_CHAR_OBJECTIVE ( nmate1 , WAIT_ON_FOOT )
+SET_CHAR_THREAT_SEARCH ( nmate1 , NO_THREATS )
+
+CHAR_DATA nmate2 = ( 11.6 , 14.8 ) 22 135 DUMMY
+SET_CHAR_OBJECTIVE ( nmate2 , WAIT_ON_FOOT )
+SET_CHAR_THREAT_SEARCH ( nmate2 , NO_THREATS )
+
+CHAR_DATA nmate3 = ( 16.3 , 13.4 ) 22 45 DUMMY
+SET_CHAR_OBJECTIVE ( nmate3 , WAIT_ON_FOOT )
+SET_CHAR_THREAT_SEARCH ( nmate3 , NO_THREATS )
+
+CHAR_DATA nmate4 = ( 16.5 , 13.6 ) 22 225 DUMMY
+SET_CHAR_OBJECTIVE ( nmate4 , WAIT_ON_FOOT )
+SET_CHAR_THREAT_SEARCH ( nmate4 , NO_THREATS )
+
+CHAR_DATA guard1 = ( 17.9 , 15.5 ) 0 270 ANY_LAW_ENFORCEMENT
+
+CHAR_DATA guard2 = ( 12.4 , 16.6 ) 0 135 ANY_LAW_ENFORCEMENT
+GIVE_WEAPON ( guard2 , pistol )
+SET_CHAR_OBJECTIVE ( guard2 , GUARD_SPOT )
+SET_CHAR_THREAT_REACTION ( guard2 , REACT_AS_NORMAL )
+
+
+SWITCH_GENERATOR ( generator_machinegun_1 , ON )
+SWITCH_GENERATOR ( generator_cocktails_1 , ON )
+SWITCH_GENERATOR ( generator_shotgun_1 , ON )
+SWITCH_GENERATOR ( generator_electrogun_1 , ON )
+SWITCH_GENERATOR ( generator_dual_pistol_1 , ON )
+SWITCH_GENERATOR ( generator_flame_1 , ON )
+SWITCH_GENERATOR ( generator_rocket_1 , ON )
+SWITCH_GENERATOR ( generator_silenced_mg_1 , ON )
+SWITCH_GENERATOR ( generator_invisibility_1 , ON )
+SWITCH_GENERATOR ( generator_armour_1 , ON )
+SWITCH_GENERATOR ( generator_grenade_1 , ON )
+SWITCH_GENERATOR ( generator_jail_free_1 , ON )
+SWITCH_GENERATOR ( generator_car_bomb_1 , ON )
+SWITCH_GENERATOR ( generator_life_up_1 , ON )
+SWITCH_GENERATOR ( generator_car_mg_1 , ON )
+SWITCH_GENERATOR ( generator_car_mines_1 , ON )
+SWITCH_GENERATOR ( generator_shotgun_2 , ON )
+SWITCH_GENERATOR ( generator_silenced_mg_2 , ON )
+SWITCH_GENERATOR ( generator_dbl_damage_1 , ON )
+SWITCH_GENERATOR ( generator_electrify_1 , ON )
+SWITCH_GENERATOR ( generator_health_1 , ON )
+SWITCH_GENERATOR ( generator_dbl_fire_1 , ON )
+SWITCH_GENERATOR ( generator_armour_2 , ON )
+SWITCH_GENERATOR ( generator_flame_2 , ON )
+SWITCH_GENERATOR ( generator_pistal_1 , ON )
+SWITCH_GENERATOR ( generator_grenade_2 , ON )
+SWITCH_GENERATOR ( generator_electrogun_2 , ON )
+
+SWITCH_GENERATOR ( generator_multiply_e , OFF )
+SWITCH_GENERATOR ( generator_life_up_e , OFF )
+SWITCH_GENERATOR ( generator_health_e , OFF )
+SWITCH_GENERATOR ( generator_armour_e , OFF )
+SWITCH_GENERATOR ( generator_jail_free_e , OFF )
+SWITCH_GENERATOR ( generator_dbl_damage_e , OFF )
+SWITCH_GENERATOR ( generator_dbl_fire_e , OFF )
+SWITCH_GENERATOR ( generator_electrify_e , OFF )
+SWITCH_GENERATOR ( generator_invisibility_e , OFF )
+
+SWITCH_GENERATOR ( generator_pistol_e , OFF )
+SWITCH_GENERATOR ( generator_dblpistol_e , OFF )
+SWITCH_GENERATOR ( generator_shotgun_e , OFF )
+SWITCH_GENERATOR ( generator_lctrcgun_e , OFF )
+SWITCH_GENERATOR ( generator_mg_e , OFF )
+SWITCH_GENERATOR ( generator_smg_e , OFF )
+SWITCH_GENERATOR ( generator_molotov_e , OFF )
+SWITCH_GENERATOR ( generator_grenade_e , OFF )
+SWITCH_GENERATOR ( generator_flame_e , OFF )
+SWITCH_GENERATOR ( generator_rocket_e , OFF )
+
+SWITCH_GENERATOR ( generator_oil_e , OFF )
+SWITCH_GENERATOR ( generator_mines_e , OFF )
+SWITCH_GENERATOR ( generator_carmg_e , OFF )
+SWITCH_GENERATOR ( generator_bomb_e , OFF )
+
+DECLARE_TOTAL_MISSIONS ( 4 )
+DECLARE_TOTAL_SECRETS ( 0 )
+DECLARE_MISSIONS_PASSED_FLAG ( msdone )
+
+DELAY_HERE ( 1 )
+EXPLODE_NO_RING ( 18.0 , 15.5 , 0.5 )
+CHANGE_BLOCK SIDE ( 18 , 15 , 1 ) LEFT NOT_WALL NOT_BULLET flat flip 0 237
+CHANGE_BLOCK SIDE ( 18 , 15 , 1 ) RIGHT NOT_WALL NOT_BULLET not_flat flip 270 237
+
+
+CHAR_DATA break1 = ( 20.6 , 15.5 ) 8 270 CRIMINAL_TYPE1
+GIVE_WEAPON ( break1 , MACHINE_GUN )
+
+CHAR_DATA break2 = ( 20.4 , 15.4 ) 8 270 CRIMINAL_TYPE1
+GIVE_WEAPON ( break2 , MACHINE_GUN )
+
+CHAR_DATA break3 = ( 20.8 , 15.6 ) 8 270 CRIMINAL_TYPE1
+GIVE_WEAPON ( break3 , MACHINE_GUN )
+
+ADD_GROUP_TO_CHARACTER ( break2 , 0 )
+MAKE_NEW_LEADER_OF_GROUP ( break2 , break1 )
+ADD_EXISTING_CHAR_TO_GROUP ( break1 , break3 )
+
+SET_CHAR_OBJECTIVE ( break1 , KILL_CHAR_ON_FOOT , guard2 )
+SET_CHAR_THREAT_REACTION ( break1 , REACT_AS_NORMAL )
+SET_CHAR_OBJECTIVE ( guard2 , KILL_CHAR_ON_FOOT , break1 )
+KILL_CHAR ( guard1 )
+SET_CHAR_OBJECTIVE ( nmate2 , GOTO_AREA_ON_FOOT , 20.5 , 15.5 , 0.0 )
+SET_CHAR_OBJECTIVE ( nmate1 , GOTO_AREA_ON_FOOT , 20.7 , 15.5 , 0.0 )
+SET_CHAR_OBJECTIVE ( nmate3 , GOTO_AREA_ON_FOOT , 20.3 , 15.3 , 0.0 )
+SET_CHAR_OBJECTIVE ( nmate4 , GOTO_AREA_ON_FOOT , 20.3 , 15.5 , 0.0 )
+
+DISPLAY_BRIEF ( 1138 )
+
+WHILE ( NOT ( HAS_CHARACTER_DIED ( guard2 ) ) )
+
+DO_NOWT
+
+ENDWHILE
+
+SET_CHAR_OBJECTIVE ( nmate2 , NO_OBJ )
+SET_CHAR_OBJECTIVE ( nmate1 , NO_OBJ )
+SET_CHAR_OBJECTIVE ( nmate3 , NO_OBJ )
+SET_CHAR_OBJECTIVE ( nmate4 , NO_OBJ )
+SET_CHAR_OBJECTIVE ( break1 , NO_OBJ )
+
+WHILE ( gameloop = 1 )
+
+IF ( ( msdone = 4 ) AND ( lev_done = 0 ) )
+	DISPLAY_MESSAGE ( 1116 )
+	end_lev_car = CREATE_CAR ( 178.3 , 91.0 ) 2 180 LIMO END
+	SET_ARROW_COLOUR ( end_lev_arrow , YELLOW )
+	POINT_ARROW_AT ( end_lev_arrow , end_lev_car )
+	SET_CAR_BULLETPROOF ( end_lev_car , ON )
+	SET_CAR_FLAMEPROOF ( end_lev_car , ON )
+	SET_CAR_ROCKETPROOF ( end_lev_car , ON )
+	SET lev_done = 1
+ENDIF
+
+IF ( ( lev_done = 1 ) AND ( IS_CHARACTER_IN_CAR ( player , end_lev_car ) ) )
+	REMOVE_ARROW ( end_lev_arrow )
+	DISPLAY_BRIEF ( 1118 )
+	CLEAR_WANTED_LEVEL ( player )
+	ADD_SCORE ( player , 5000000 )
+	ADD_LIVES ( player , 5 )
+	end_lev_1 = CREATE_CAR ( 149.3 , 86.4 ) 30 225 MIURA END
+	end_lev_2 = CREATE_CAR ( 142.6 , 82.6 ) 24 225 RTYPE END
+	end_lev_3 = CREATE_CAR ( 6.7 , 34.9 ) -1 225 FIRETRUK END
+	GIVE_WEAPON ( end_lev_3 , CAR_FLAMETHROWER )
+	end_lev_4 = CREATE_CAR ( 51.6 , 121.4 ) 20 45 TRANCEAM END
+	end_lev_5 = CREATE_CAR ( 66.6 , 132.5 ) 17 90 VTYPE END
+	end_lev_6 = CREATE_CAR ( 66.6 , 130.5 ) 19 90 GT24640 END
+	end_lev_7 = CREATE_CAR ( 51.6 , 195.3 ) 0 180 STRIPETB END
+	SWITCH_GENERATOR ( generator_multiply_e , ON )
+	SWITCH_GENERATOR ( generator_life_up_e , ON )
+	SWITCH_GENERATOR ( generator_health_e , ON )
+	SWITCH_GENERATOR ( generator_armour_e , ON )
+	SWITCH_GENERATOR ( generator_jail_free_e , ON )
+	SWITCH_GENERATOR ( generator_dbl_damage_e , ON )
+	SWITCH_GENERATOR ( generator_dbl_fire_e , ON )
+	SWITCH_GENERATOR ( generator_electrify_e , ON )
+	SWITCH_GENERATOR ( generator_invisibility_e , ON )
+	end_lev_8 = CREATE_CAR ( 53.5 , 190.5 ) 0 180 TANK END
+	end_lev_9 = CREATE_CAR ( 55.5 , 190.5 ) 0 180 TANK END
+	end_lev_10 = CREATE_CAR ( 57.5 , 190.5 ) 0 180 TANK END
+	SWITCH_GENERATOR ( generator_pistol_e , ON )
+	SWITCH_GENERATOR ( generator_dblpistol_e , ON )
+	SWITCH_GENERATOR ( generator_shotgun_e , ON )
+	SWITCH_GENERATOR ( generator_lctrcgun_e , ON )
+	SWITCH_GENERATOR ( generator_mg_e , ON )
+	SWITCH_GENERATOR ( generator_smg_e , ON )
+	SWITCH_GENERATOR ( generator_molotov_e , ON )
+	SWITCH_GENERATOR ( generator_grenade_e , ON )
+	SWITCH_GENERATOR ( generator_flame_e , ON )
+	SWITCH_GENERATOR ( generator_rocket_e , ON )
+	SWITCH_GENERATOR ( generator_oil_e , ON )
+	SWITCH_GENERATOR ( generator_mines_e , ON )
+	SWITCH_GENERATOR ( generator_carmg_e , ON )
+	SWITCH_GENERATOR ( generator_bomb_e , ON )
+	++ gameloop
+ENDIF
+
+ENDWHILE
+
+WHILE ( loop2 = 1 )
+
+DO_NOWT
+
+ENDWHILE
+
+LEVELEND
+
+
+
+

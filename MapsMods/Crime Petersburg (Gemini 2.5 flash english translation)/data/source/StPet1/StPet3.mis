@@ -1,0 +1,217 @@
+COUNTER explo = 0
+ARROW_DATA explo_arrow
+
+CAR_DATA explo_car1
+CAR_DATA explo_car2
+CAR_DATA explo_car3
+CHAR_DATA fbi_man1
+CHAR_DATA fbi_man2
+
+FORWARD clean_up_fbi_mission:
+
+fbi_mission:
+
+SET flag_failed_fbi_mission = 0
+SET flag_on_mission = 1
+SET flag_on_fbi_mission = 1
+
+explo_car1 = CREATE_CAR (29.5, 53.3, 2.0) 2 180 buick END
+POINT_ARROW_AT (explo_arrow, explo_car1)
+DISPLAY_BRIEF (9050)
+
+WHILE (explo=0)
+IF (IS_CHARACTER_IN_CAR (player, explo_car1))
+DISPLAY_BRIEF (9051)
+REMOVE_ARROW(explo_arrow)
+ADD_SCORE (player, 5000)
+SET explo=1
+ENDIF
+
+ENDWHILE
+
+WHILE (explo=1)
+IF (HAS_CAR_GOT_WEAPON (explo_car1, CAR_BOMB))
+DISPLAY_BRIEF (9052)
+POINT_ARROW_AT (explo_arrow, 22.5, 8.5, 2.0)
+set explo=2
+ENDIF
+ENDWHILE
+
+WHILE (explo=2)
+IF (CHECK_CAR_WRECKED_IN_AREA (explo_car1, 22.5, 8.5, 2.0, 1.0, 1.0))
+DISPLAY_BRIEF (9053)
+EXPLODE_LARGE (  22.5, 10.5, 3.0 )
+EXPLODE_LARGE (  22.5  , 6.5 , 3.0 )
+EXPLODE_LARGE (  22.5, 10.5, 6.0 )
+EXPLODE_LARGE (  22.5  , 6.5 , 6.0 )
+REMOVE_ARROW (explo_arrow)
+explo_car2 = CREATE_CAR (16.5,54.5,2.0) 2 180 van END
+set explo=3
+POINT_ARROW_At (explo_arrow, explo_car2)
+ENDIF
+ENDWHILE
+
+WHILE (explo=3)
+IF (IS_CHARACTER_IN_CAR (player, explo_car2))
+DISPLAY_BRIEF (9054)
+REMOVE_ARROW(explo_arrow)
+ADD_SCORE (player, 5000)
+SET explo=4
+ENDIF
+ENDWHILE
+
+WHILE (explo=4)
+IF (HAS_CAR_GOT_WEAPON (explo_car2, CAR_BOMB))
+DISPLAY_BRIEF (9055)
+POINT_ARROW_AT (explo_arrow, 55.5, 19.5, 2.0)
+set explo=5
+ENDIF
+ENDWHILE
+
+WHILE (explo=5)
+IF (CHECK_CAR_WRECKED_IN_AREA (explo_car2, 55.5, 19.5, 2.0, 1.0, 1.0))
+DISPLAY_BRIEF (9056)
+REMOVE_ARROW (explo_arrow)
+EXPLODE_LARGE (  54.5, 18.5, 3.0 )
+EXPLODE_LARGE (  54.5  ,20.5 , 3.0 )
+EXPLODE_LARGE (  54.5, 18.5, 6.0 )
+EXPLODE_LARGE (  54.5  , 20.5 , 6.0 )
+explo_car3 = CREATE_CAR (15.0,26.0,2.0) 2 90 boxtruck END
+set explo=6
+POINT_ARROW_At (explo_arrow, explo_car3)
+ENDIF
+ENDWHILE
+
+WHILE (explo=6)
+IF (IS_CHARACTER_IN_CAR (player, explo_car3))
+DISPLAY_BRIEF (9057)
+REMOVE_ARROW(explo_arrow)
+ADD_SCORE (player, 5000)
+SET explo=7
+ENDIF
+ENDWHILE
+
+WHILE (explo=7)
+IF (HAS_CAR_GOT_WEAPON (explo_car3, CAR_BOMB))
+DISPLAY_BRIEF (9058)
+POINT_ARROW_AT (explo_arrow, 45.5, 43.5, 2.0)
+set explo=8
+ENDIF
+ENDWHILE
+
+WHILE (explo=8)
+IF (CHECK_CAR_WRECKED_IN_AREA (explo_car3, 45.5, 43.5, 2.0, 1.0, 1.0))
+DISPLAY_BRIEF (9059)
+EXPLODE_LARGE (  44.5, 42.5, 3.0 )
+EXPLODE_LARGE (  44.5  ,42.5 , 6.0 )
+EXPLODE_LARGE (  46.5, 42.5, 3.0 )
+EXPLODE_LARGE (  46.5  , 42.5 , 6.0 )
+REMOVE_BLOCK (46, 42, 4, DROP)
+REMOVE_BLOCK (47, 42, 4, DROP)
+REMOVE_BLOCK (46, 43, 4, DROP)
+REMOVE_BLOCK (47, 43, 4, DROP)
+REMOVE_BLOCK (46, 42, 3, DROP)
+REMOVE_BLOCK (47, 42, 3, DROP)
+REMOVE_BLOCK (46, 43, 3, DROP)
+REMOVE_BLOCK (47, 43, 3, DROP)
+REMOVE_BLOCK (46, 42, 2, DROP)
+REMOVE_BLOCK (47, 42, 2, DROP)
+REMOVE_BLOCK (46, 43, 2, DROP)
+REMOVE_BLOCK (47, 43, 2, DROP)
+CHANGE_BLOCK LID (45 ,42 ,1 )  not_flat not_flip 0 270 476
+CHANGE_BLOCK LID (45 ,43 ,1 )  not_flat not_flip 0 270 476
+CHANGE_BLOCK LID (47 ,41 ,1 )  not_flat not_flip 0 0 476
+CHANGE_BLOCK LID (46 ,41 ,1 )  not_flat not_flip 0 0 476
+CHANGE_BLOCK LID (46 ,42 ,1 )  not_flat not_flip 0 0 474
+CHANGE_BLOCK LID (46 ,43 ,1 )  not_flat not_flip 0 270 474
+CHANGE_BLOCK LID (47 ,42 ,1 )  not_flat not_flip 0 0 474
+CHANGE_BLOCK LID (47 ,43 ,1 )  not_flat not_flip 0 0 474
+set destroying_house=1
+REMOVE_ARROW (explo_arrow)
+SET flag_passed_fbi_mission = 1
+CLEAR_WANTED_LEVEL (player)
+set explo=9
+SET_PHONE_DEAD (phone_fbi)
+DISPLAY_MESSAGE (3100)
+DISABLE_THREAD_TRIGGER (fbi_mission)
+CHANGE_GANG_CHAR_RESPECT_AND_UPDATE (fbigang, player, 1)
+ADD_MULTIPLIER (player, 1)
+ADD_SCORE (player, 30000)
+DELETE_ITEM (explo_car1)
+DELETE_ITEM (explo_car2)
+DELETE_ITEM (explo_car3)
+RETURN
+ENDIF
+ENDWHILE
+
+clean_up_fbi_mission: 
+REMOVE_ARROW (explo_arrow)
+DELETE_ITEM (explo_car1)
+DELETE_ITEM (explo_car2)
+DELETE_ITEM (explo_car3)
+IF ( flag_passed_fbi_mission = 1 )
+++ flag_fbi_missions_passed
+++ flag_all_missions_passed
+IF ( flag_fbi_missions_passed = 1 )
+//DISPLAY_BRIEF ( 9063 ) 
+DISPLAY_MESSAGE ( 9064 )
+ENDIF
+ENDIF
+IF ( flag_failed_fbi_mission = 1 )
+++ flag_fbi_missions_failed
+++ flag_all_missions_failed
+CHANGE_GANG_CHAR_RESPECT_AND_UPDATE ( fbigang , player , -1 ) 
+CLEAR_WANTED_LEVEL ( player )
+CLEAR_ALL_BRIEFS ( )
+ENDIF
+IF ( CHECK_DEATHARREST_EXECUTED ( ) )
+++ flag_fbi_missions_failed
+++ flag_all_missions_failed
+CHANGE_GANG_CHAR_RESPECT_AND_UPDATE ( fbigang, player , -1 ) 
+CLEAR_WANTED_LEVEL ( player )
+ENDIF
+
+
+
+
+
+
+
+MISSION_HAS_FINISHED ( ) 
+SET flag_on_mission= 0
+SET flag_on_fbi_mission = 0
+RETURN
+MISSIONSTART
+GOSUB fbi_mission:
+GOSUB clean_up_fbi_mission: 
+MISSIONEND 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

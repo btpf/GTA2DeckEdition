@@ -1,0 +1,6 @@
+[MapFiles]
+GMPFile = CapitalCity.gmp
+STYFile = wil.sty
+SCRFile = CapitalCityMP-5P.scr
+Description = CapitalCity 5Player
+PlayerCount = 5

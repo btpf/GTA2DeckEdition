@@ -1,0 +1,365 @@
+COUNTER team=0
+COUNTER raid=0
+
+
+CHAR_DATA army_team
+CHAR_DATA fbi_raid1_man1
+CHAR_DATA fbi_raid1_man2
+CHAR_DATA fbi_raid1_man3
+CHAR_DATA fbi_raid2_man1
+CHAR_DATA fbi_raid2_man2
+CHAR_DATA fbi_raid2_man3
+CHAR_DATA fbi_raid3_man1
+CHAR_DATA fbi_raid3_man2
+CHAR_DATA fbi_raid3_man3
+CHAR_DATA fbi_raid3_man4
+CHAR_DATA fbi_raid3_man5
+CHAR_DATA fbi_raid3_man6
+CHAR_DATA djahar
+
+CAR_DATA fbi_raid1_car1
+CAR_DATA fbi_raid2_car1
+CAR_DATA fbi_raid3_car1
+CAR_DATA fbi_raid3_car2
+
+CHAR_DATA army_blockman1
+CHAR_DATA army_blockman2
+CHAR_DATA army_blockman3
+CHAR_DATA army_blockman4
+CHAR_DATA army_blockman5
+CAR_DATA army_blockcar1
+CAR_DATA army_blockcar2
+CAR_DATA army_blockcar3
+CAR_DATA army_blockcar4
+CAR_DATA army_blockcar5
+
+ARROW_DATA van_arrow1
+ARROW_DATA van_arrow2
+ARROW_DATA van_arrow3
+ARROW_DATA raid_arrow
+ARROW_DATA raid_arrow2
+ARROW_DATA raid_arrow3
+ARROW_DATA fbi_HQ_arrow
+ARROW_DATA fbi_door_arrow
+ARROW_DATA djahar_arrow
+
+FORWARD clean_up_army_mission: 
+
+army_mission:
+
+SET flag_failed_army_mission = 0
+SET flag_on_mission = 1
+SET flag_on_army_mission = 1
+
+CHANGE_CAR_LOCK (swatcar1, unlocked)
+CHANGE_CAR_LOCK (swatcar2, unlocked)
+CHANGE_CAR_LOCK (swatcar3, unlocked)
+POINT_ARROW_AT (van_arrow1, swatcar1) 
+POINT_ARROW_AT (van_arrow2, swatcar2) 
+POINT_ARROW_AT (van_arrow3, swatcar3) 
+SET_CAR_BULLETPROOF  (  swatcar2,  OFF  )
+SET_CAR_ROCKETPROOF  (  swatcar2,  OFF  )
+SET_CAR_BULLETPROOF  (  swatcar1,  OFF  )
+SET_CAR_ROCKETPROOF  (  swatcar1,  OFF  )
+SET_CAR_BULLETPROOF  (  swatcar3,  OFF  )
+SET_CAR_ROCKETPROOF  (  swatcar3,  OFF  )
+DISPLAY_BRIEF (9030)
+
+
+WHILE (team = 0)
+IF (IS_GROUP_IN_CAR (player)) 
+DISPLAY_BRIEF (9031)
+army_team = CREATE_CHAR (45.5,15.5, 2.0) 4 0 army END
+GIVE_WEAPON (army_team, machine_gun)
+ADD_GROUP_TO_CHARACTER ( army_team , 8 )
+MAKE_NEW_LEADER_OF_GROUP (army_team, player)
+GIVE_WEAPON (player, machine_gun, 30)
+fbi_raid1_man1 = CREATE_CHAR (6.8, 21.3, 2.0) 41 70 criminal END
+fbi_raid1_man2 = CREATE_CHAR (7.5, 20.4, 2.0) 41 350 criminal END
+fbi_raid1_man3 = CREATE_CHAR (8.5, 22.5, 2.0) 41 270 criminal END
+fbi_raid1_car1 = CREATE_CAR (7.5, 21.3, 2.0) 2 20 pickup END
+GIVE_WEAPON (fbi_raid1_man1, shotgun)
+GIVE_WEAPON (fbi_raid1_man2, dual_pistol)
+GIVE_WEAPON (fbi_raid1_man3, shotgun)
+ADD_CHAR_TO_GANG (fbi_raid1_man1, fbigang)
+ADD_CHAR_TO_GANG (fbi_raid1_man2, fbigang)
+ADD_CHAR_TO_GANG (fbi_raid1_man3, fbigang)
+SET_CHAR_OBjECTIVE (fbi_raid1_man1, GUARD_AREA)
+SET_CHAR_OBjECTIVE (fbi_raid1_man2, GUARD_AREA)
+SET_CHAR_OBjECTIVE (fbi_raid1_man3, GUARD_AREA)
+SET_CHAR_THREAT_REACTION (fbi_raid1_man1, react_as_normal)
+SET_CHAR_THREAT_REACTION (fbi_raid1_man2, react_as_normal)
+SET_CHAR_THREAT_REACTION (fbi_raid1_man3, react_as_normal)
+SET_CHAR_THReAT_SEARCH (fbi_raid1_man1,  area_player_only)
+SET_CHAR_THReAT_SEARCH (fbi_raid1_man2,  area_player_only)
+SET_CHAR_THReAT_SEARCH (fbi_raid1_man3,  area_player_only)
+REMOVE_ARROW (van_arrow1)
+REMOVE_ARROW (van_arrow2)
+REMOVE_ARROW (van_arrow3)
+POINT_ARROW_AT (raid_arrow, fbi_raid1_car1)
+SET team=1
+SET raid=1
+ENDIF
+ENDWHILE
+
+
+WHILE (raid=1)
+IF (IS_CAR_WRECKED (fbi_raid1_car1))
+DISPLAY_BRIEF (9032)
+REMOVE_ARROW (raid_arrow)
+fbi_raid2_man1 = CREATE_CHAR (23.2, 52.5, 2.0) 41 180 criminal END
+fbi_raid2_man2 = CREATE_CHAR (24.2, 52.7, 2.0) 41 180 criminal END
+fbi_raid2_man3 = CREATE_CHAR (24.5, 53.5, 2.0) 41 90 criminal END
+fbi_raid2_car1 = CREATE_CAR (23.5, 53.5, 2.0) 2 17 gtruck END
+GIVE_WEAPON (fbi_raid2_man1, dual_pistol)
+GIVE_WEAPON (fbi_raid2_man2, shotgun)
+GIVE_WEAPON (fbi_raid2_man3, machine_gun)
+ADD_CHAR_TO_GANG (fbi_raid2_man1, fbigang)
+ADD_CHAR_TO_GANG (fbi_raid2_man2, fbigang)
+ADD_CHAR_TO_GANG (fbi_raid2_man3, fbigang)
+SET_CHAR_OBjECTIVE (fbi_raid2_man1, GUARD_AREA)
+SET_CHAR_OBjECTIVE (fbi_raid2_man2, GUARD_AREA)
+SET_CHAR_OBjECTIVE (fbi_raid2_man3, GUARD_AREA)
+SET_CHAR_THREAT_REACTION (fbi_raid2_man1, react_as_normal)
+SET_CHAR_THREAT_REACTION (fbi_raid2_man2, react_as_normal)
+SET_CHAR_THREAT_REACTION (fbi_raid2_man3, react_as_normal)
+SET_CHAR_THREAT_SEARCH (fbi_raid2_man1, area_player_only)
+SET_CHAR_THREAT_SEARCH (fbi_raid2_man2, area_player_only)
+SET_CHAR_THREAT_SEARCH (fbi_raid2_man3, area_player_only)
+POINT_ARROW_AT (raid_arrow2, fbi_raid2_car1)
+SET raid=2
+ENDIF
+ENDWHILE
+
+WHILE (raid=2)
+IF (IS_CAR_WRECKED (fbi_raid2_car1))
+DISPLAY_BRIEF (9033)
+REMOVE_ARROW (raid_arrow2)
+fbi_raid3_man1 = CREATE_CHAR (18.2, 25.2, 2.0) 41 0 criminal END
+fbi_raid3_man2 = CREATE_CHAR (20.4, 26.7, 2.0) 41 270 criminal END
+fbi_raid3_man3 = CREATE_CHAR (17.9, 25.5, 2.0) 41 135 criminal END
+fbi_raid3_man4 = CREATE_CHAR (18.5, 25.5, 2.0) 41 255 criminal END
+fbi_raid3_man5 = CREATE_CHAR (18.4, 26.2, 2.0) 41 35 criminal END
+fbi_raid3_man6 = CREATE_CHAR (17.5, 26.2, 2.0) 41 90 criminal END
+fbi_raid3_car1 = CREATE_CAR (17.5, 26.5, 2.0) 2 270 boxtruck END
+fbi_raid3_car2 = CREATE_CAR (20.5, 25.9, 2.0) 2 180 van END
+CHANGE_CAR_LOCK (fbi_raid3_car1, locked)
+CHANGE_CAR_LOCK (fbi_raid3_car2, locked)
+SET_CAR_BULLETPROOF  (  fbi_raid3_car2,  ON  )
+GIVE_WEAPON (fbi_raid3_man1, shotgun)
+GIVE_WEAPON (fbi_raid3_man2, shotgun)
+GIVE_WEAPON (fbi_raid3_man3, machine_gun)
+GIVE_WEAPON (fbi_raid3_man4, machine_gun)
+GIVE_WEAPON (fbi_raid3_man5, molotov)
+GIVE_WEAPON (fbi_raid3_man6, flame_thrower)
+ADD_CHAR_TO_GANG (fbi_raid3_man1, fbigang)
+ADD_CHAR_TO_GANG (fbi_raid3_man2, fbigang)
+ADD_CHAR_TO_GANG (fbi_raid3_man3, fbigang)
+ADD_CHAR_TO_GANG (fbi_raid3_man4, fbigang)
+ADD_CHAR_TO_GANG (fbi_raid3_man5, fbigang)
+ADD_CHAR_TO_GANG (fbi_raid3_man6, fbigang)
+SET_CHAR_OBjECTIVE (fbi_raid3_man1, GUARD_AREA)
+SET_CHAR_OBjECTIVE (fbi_raid3_man2, GUARD_AREA)
+SET_CHAR_OBjECTIVE (fbi_raid3_man3, GUARD_AREA)
+SET_CHAR_OBjECTIVE (fbi_raid3_man4, GUARD_AREA)
+SET_CHAR_OBjECTIVE (fbi_raid3_man5, GUARD_AREA)
+SET_CHAR_OBjECTIVE (fbi_raid3_man6, GUARD_AREA)
+SET_CHAR_THREAT_REACTION (fbi_raid3_man1, react_as_normal)
+SET_CHAR_THREAT_REACTION (fbi_raid3_man2, react_as_normal)
+SET_CHAR_THREAT_REACTION (fbi_raid3_man3, react_as_normal)
+SET_CHAR_THREAT_REACTION (fbi_raid3_man4, react_as_normal)
+SET_CHAR_THREAT_REACTION (fbi_raid3_man5, react_as_normal)
+SET_CHAR_THREAT_REACTION (fbi_raid3_man6, react_as_normal)
+SET_CHAR_THREAT_SEARCH (fbi_raid3_man1, area_player_only)
+SET_CHAR_THREAT_SEARCH (fbi_raid3_man2, area_player_only)
+SET_CHAR_THREAT_SEARCH (fbi_raid3_man3, area_player_only)
+SET_CHAR_THREAT_SEARCH (fbi_raid3_man4, area_player_only)
+SET_CHAR_THREAT_SEARCH (fbi_raid3_man5, area_player_only)
+SET_CHAR_THREAT_SEARCH (fbi_raid3_man6, area_player_only)
+POINT_ARROW_AT (raid_arrow3, fbi_raid3_car1)
+SET raid=3
+ENDIF
+ENDWHILE
+
+WHILE (raid=3)
+IF (IS_CAR_WRECKED (fbi_raid3_car1))
+DISPLAY_BRIEF (9034)
+CLEAR_WANTED_LEVEL (player)
+REMOVE_ARROW (raid_arrow3)
+army_blockman1 = CREATE_CHAR (22.5, 49.5, 2.0) 4 270 ARMY END
+army_blockman2 = CREATE_CHAR (22.5, 48.5, 2.0) 4 270 ARMY END
+army_blockman3 = CREATE_CHAR (20.5, 46.5, 2.0) 4 0 ARMY END
+army_blockman4 = CREATE_CHAR (19.5, 46.5, 2.0) 4 0 ARMY END
+army_blockman5 = CREATE_CHAR (20.5, 48.5, 2.0) 4 315 ARMY END
+SET_CHAR_THREAT_REACTION (army_blockman1, no_reaction)
+SET_CHAR_THREAT_REACTION (army_blockman2,  no_reaction)
+SET_CHAR_THREAT_REACTION (army_blockman3,  no_reaction)
+SET_CHAR_THREAT_REACTION (army_blockman4,  no_reaction)
+SET_CHAR_THREAT_REACTION (army_blockman5,  no_reaction)
+SET_CHAR_THREAT_SEARCH (army_blockman1, NO_THREATS)
+SET_CHAR_THREAT_SEARCH (army_blockman2, NO_THREATS)
+SET_CHAR_THREAT_SEARCH (army_blockman3, NO_THREATS)
+SET_CHAR_THREAT_SEARCH (army_blockman4, NO_THREATS)
+SET_CHAR_THREAT_SEARCH (army_blockman5, NO_THREATS)
+GIVE_WEAPON (army_blockman1, flame_thrower)
+GIVE_WEAPON (army_blockman2, flame_thrower)
+GIVE_WEAPON (army_blockman3, flame_thrower)
+GIVE_WEAPON (army_blockman4, flame_thrower)
+GIVE_WEAPON (army_blockman5, flame_thrower)
+army_blockcar1 = CREATE_CAR (19.5, 47.5, 2.0) 1 270 gunjeep END
+army_blockcar2 = CREATE_CAR (20.5, 47.5, 2.0) 1 270  gunjeep END
+army_blockcar3 = CREATE_CAR (21.5, 48.5, 2.0) 1 0 gunjeep END
+army_blockcar4 = CREATE_CAR (21.5, 49.5, 2.0) 1 0 gunjeep END
+army_blockcar5 = CREATE_CAR (19.5, 49.5, 2.0) 1 45 gunjeep END
+djahar = CREATE_CHAR (21.5, 54.5, 3.0) 41 270 drone END
+ADD_CHAR_TO_GANG (djahar, fbigang)
+GIVE_WEAPON (djahar, electro_gun)
+SET_CHAR_OBjECTIVE (djahar, GUARD_AREA)
+SET_CHAR_THREAT_REACTION (djahar, react_as_normal)
+SET_CHAR_THREAT_SEARCH (djahar, area_player_only)
+CHANGE_CAR_LOCK (army_blockcar1, locked)
+CHANGE_CAR_LOCK (army_blockcar2, locked)
+CHANGE_CAR_LOCK (army_blockcar3, locked)
+CHANGE_CAR_LOCK (army_blockcar4, locked)
+CHANGE_CAR_LOCK (army_blockcar5, locked)
+SET raid=5
+POINT_ARROW_AT (fbi_HQ_arrow, army_blockcar3)
+CLOSE_DOOR (fbi_door_1)
+ENDIF
+ENDWHILE
+
+WHILE (raid=5)
+IF (IS_ITEM_ONSCREEN  ( army_blockcar3))
+DISPLAY_BRIEF (9035)
+DELETE_ITEM (fbi_raid3_car1)
+DELETE_ITEM (fbi_raid3_car2)
+DELETE_ITEM (fbi_raid2_car1)
+DELETE_ITEM (fbi_raid1_car1)
+REMOVE_ARROW (fbi_HQ_arrow)
+POINT_ARROW_AT (fbi_door_arrow, 17.5, 49.5, 2.0)
+SET raid=6
+ENDIF
+ENDWHILE
+
+WHILE (raid=6)
+IF (LOCATE_CHARACTER_ON_FOOT (player, 17.5, 49.5, 2.0, 1.0, 1.0))
+DISPLAY_BRIEF (9036)
+CHANGE_GANG_CHAR_RESPECT (fbigang, player, -5)
+REMOVE_ARROW (fbi_door_arrow)
+OPEN_DOOR (fbi_door_1)
+SET_CHAR_OBJECTIVE (army_blockman1, goto_area_on_foot, 16.5, 49.5, 2.0)
+SET_CHAR_OBJECTIVE (army_blockman2, goto_area_on_foot, 16.5, 49.5, 2.0)
+SET_CHAR_OBJECTIVE (army_blockman3, goto_area_on_foot, 16.5, 49.5, 2.0)
+SET_CHAR_OBJECTIVE (army_blockman4, goto_area_on_foot, 16.5, 49.5, 2.0)
+SET_CHAR_OBJECTIVE (army_blockman5, goto_area_on_foot, 16.5, 49.5, 2.0)
+ADD_CHAR_TO_GANG (army_blockman1, armygang)
+ADD_CHAR_TO_GANG (army_blockman2, armygang)
+ADD_CHAR_TO_GANG (army_blockman3, armygang)
+ADD_CHAR_TO_GANG (army_blockman4, armygang)
+ADD_CHAR_TO_GANG (army_blockman5, armygang)
+POINT_ARROW_AT (djahar_arrow, djahar)
+set raid=7
+ENDIF
+ENDWHILE
+
+WHILE (raid=7)
+IF (HAS_CHARACTER_DIED (djahar))
+REMOVE_ARROW (djahar_arrow)
+DISPLAY_BRIEF (9037)
+SET flag_passed_army_mission = 1
+set raid=8
+ADD_MULTIPLIER (player, 1)
+ADD_SCORE (player, 150000)
+DISPLAY_MESSAGE (3100)
+CHANGE_GANG_CHAR_RESPECT_AND_UPDATE (armygang, player, 2)
+CLEAR_WANTED_LEVEL (player)
+SET_PHONE_DEAD (phone_army)
+DELETE_ITEM (army_blockman1)
+DELETE_ITEM (army_blockman2)
+DELETE_ITEM (army_blockman3)
+DELETE_ITEM (army_blockman4)
+DELETE_ITEM (army_blockman5)
+DELETE_ITEM (army_blockcar1)
+DELETE_ITEM (army_blockcar2)
+DELETE_ITEM (army_blockcar3)
+DELETE_ITEM (army_blockcar4)
+DELETE_ITEM (army_blockcar5)
+DISABLE_THREAD_TRIGGER (army_mission)
+RETURN
+ENDIF
+ENDWHILE
+
+clean_up_army_mission: 
+REMOVE_ARROW (van_arrow1)
+REMOVE_ARROW (van_arrow2)
+REMOVE_ARROW (van_arrow3)
+REMOVE_ARROW (raid_arrow)
+REMOVE_ARROW ( raid_arrow2)
+REMOVE_ARROW ( raid_arrow3)
+REMOVE_ARROW (fbi_HQ_arrow)
+REMOVE_ARROW (fbi_door_arrow)
+REMOVE_ARROW (djahar_arrow)
+IF ( NOT ( HAS_CHARACTER_DIED ( army_team ) ) )
+DESTROY_GROUP ( player )
+MAKE_CHAR_DO_NOTHING ( army_team )
+ENDIF
+IF ( flag_passed_army_mission = 1 )
+++ flag_army_missions_passed
+++ flag_all_missions_passed
+IF ( flag_army_missions_passed = 1 )
+//DISPLAY_BRIEF ( 3641 ) 
+DISPLAY_MESSAGE ( 3642 )
+ENDIF
+ENDIF
+IF ( flag_failed_army_mission = 1 )
+++ flag_army_missions_failed
+++ flag_all_missions_failed
+CHANGE_GANG_CHAR_RESPECT_AND_UPDATE ( armygang , player , -1 ) 
+CLEAR_WANTED_LEVEL ( player )
+CLEAR_ALL_BRIEFS ( )
+ENDIF
+IF ( CHECK_DEATHARREST_EXECUTED ( ) )
+++ flag_army_missions_failed
+++ flag_all_missions_failed
+CHANGE_GANG_CHAR_RESPECT_AND_UPDATE ( armygang, player , -1 ) 
+CLEAR_WANTED_LEVEL ( player )
+ENDIF
+
+
+
+
+MISSION_HAS_FINISHED ( ) 
+SET flag_on_mission= 0
+SET flag_on_army_mission = 0
+RETURN
+MISSIONSTART
+GOSUB army_mission:
+GOSUB clean_up_army_mission: 
+MISSIONEND 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

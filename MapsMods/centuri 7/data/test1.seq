@@ -1,0 +1,82 @@
+MainOrBonus = MAIN
+GMPFile = Centuri7.gmp
+STYFile = wil.sty
+SCRFile = Centuri.scr
+Description = Centuri 7
+
+MainOrBonus = BONUS
+GMPFile = filename.gmp
+STYFile = filename.sty
+SCRFile = filename.scr
+Description = City 1 Bonus 1
+
+MainOrBonus = BONUS
+GMPFile = filename.gmp
+STYFile = filename.sty
+SCRFile = filename.scr
+Description = City 1 Bonus 2
+
+MainOrBonus = BONUS
+GMPFile = filename.gmp
+STYFile = filename.sty
+SCRFile = filename.scr
+Description = City 1 Bonus 3
+
+
+
+
+MainOrBonus = MAIN
+GMPFile = ste.gmp
+STYFile = ste.sty
+SCRFile = ste.scr
+Description = City 2 Map
+
+MainOrBonus = BONUS
+GMPFile = filename.gmp
+STYFile = filename.sty
+SCRFile = filename.scr
+Description = City 2 Bonus 1
+
+MainOrBonus = BONUS
+GMPFile = filename.gmp
+STYFile = filename.sty
+SCRFile = filename.scr
+Description = City 2 Bonus 2
+
+MainOrBonus = BONUS
+GMPFile = filename.gmp
+STYFile = filename.sty
+SCRFile = filename.scr
+Description = City 2 Bonus 3
+
+
+
+
+MainOrBonus = MAIN
+GMPFile = bil.gmp
+STYFile = bil.sty
+SCRFile = bil.scr
+Description = City 3 Map
+
+MainOrBonus = BONUS
+GMPFile = filename.gmp
+STYFile = filename.sty
+SCRFile = filename.scr
+Description = City 3 Bonus 1
+
+MainOrBonus = BONUS
+GMPFile = filename.gmp
+STYFile = filename.sty
+SCRFile = filename.scr
+Description = City 3 Bonus 2
+
+MainOrBonus = BONUS
+GMPFile = filename.gmp
+STYFile = filename.sty
+SCRFile = filename.scr
+Description = City 3 Bonus 3
+
+
+
+
+

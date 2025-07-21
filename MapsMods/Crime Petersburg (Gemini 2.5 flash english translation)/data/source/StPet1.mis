@@ -1,0 +1,410 @@
+
+PLAYER_PED player = (25.5, 26.2,2.0) 25 90
+
+SET_GANG_INFO
+(armygang , 4 , machine_gun, grenade , rocket_launcher , 7 , 45.5 , 19.5 , 6.0 , 1 , jeep , 1 )
+ SET_GANG_INFO 
+(fbigang , 41 , shotgun, silenced_machine_gun , molotov , 3 , 21.5 , 52.5 , 2.0 , 1 , edsel
+ , 2 )
+SET_GANG_INFO
+(neutralgang , 12 , dual_pistol , machine_gun , electro_gun , 2 , 6.5 , 12.5 , 3.0 , 1,  limo, 34 )
+RADIO_STATION res  =  STATION_RESIDENTIAL  ( 21.5  , 52.5 ) 
+RADIO_STATION dt  =  STATION_DOWNTOWN  ( 6.5  , 12.5 ) 
+RADIO_STATION ind  =  STATION_INDUSTRIAL  ( 45.5  , 19.5 ) 
+
+ARROW_DATA arrow_end
+ARROW_DATA tank_keeper1_arrow
+ARROW_DATA tank_keeper2_arrow
+ARROW_DATA tank_keeper3_arrow
+
+MAP_ZONE center_fbi = ( 0 , 0 , 0 , 0 , 900 , 0 , 0 , 0 , 600 , 0 , 0 )
+MAP_ZONE center_neutral = ( 0 , 0 , 0 , 0 , 900 , 0 , 0 , 0 , 600 , 0 , 0 )
+MAP_ZONE center_army = ( 0 , 0 , 0 , 0 , 900 , 0 , 0 , 0 , 600 , 0 , 0 )
+MAP_ZONE fbi_post = ( 0 , 0 , 0 , 0 , 900 , 0 , 0 , 0 , 800 , 0 , 0 )
+MAP_ZONE army_roof = ( 0 , 0 , 0 , 0 , 900 , 0 , 0 , 0 , 800 , 0 , 0 )
+MAP_ZONE army_barracks = ( 0 , 0 , 0 , 0 , 1000 , 0 , 0 , 0 , 1000 , 0 , 0 )
+
+SAVED_COUNTER beginning = 0
+SAVED_COUNTER tank_secret = 0
+SAVED_COUNTER destroying_house = 0
+
+SAVED_COUNTER flag_on_mission = 0
+SAVED_COUNTER flag_game_been_saved = 0
+
+DECLARE_MISSION_FLAG  ( player, flag_on_mission  )
+
+SAVED_COUNTER flag_failed_army_mission = 0
+SAVED_COUNTER flag_failed_fbi_mission = 0
+SAVED_COUNTER flag_failed_neutral_mission = 0
+SAVED_COUNTER flag_passed_army_mission = 0
+SAVED_COUNTER flag_passed_fbi_mission = 0
+SAVED_COUNTER flag_passed_neutral_mission = 0
+
+SAVED_COUNTER flag_played_army_mission = 0
+SAVED_COUNTER flag_played_fbi_mission = 0
+SAVED_COUNTER flag_played_neutral_mission = 0
+
+SAVED_COUNTER flag_on_army_mission = 0
+SAVED_COUNTER flag_on_fbi_mission = 0
+SAVED_COUNTER flag_on_neutral_mission = 0
+
+SAVED_COUNTER flag_army_missions_passed = 0
+SAVED_COUNTER flag_fbi_missions_passed = 0
+SAVED_COUNTER flag_neutral_missions_passed = 0
+SAVED_COUNTER flag_army_missions_failed = 0
+SAVED_COUNTER flag_fbi_missions_failed = 0
+SAVED_COUNTER flag_neutral_missions_failed = 0
+SAVED_COUNTER flag_all_missions_passed = 0
+SAVED_COUNTER flag_all_missions_failed = 0
+SAVED_COUNTER flag_secrets_passed = 0
+SAVED_COUNTER flag_secrets_failed = 0
+
+
+
+DECLARE_GANG_ONE_MISSIONS_PASSED_FLAG  ( flag_army_missions_passed ) 
+DECLARE_GANG_TWO_MISSIONS_PASSED_FLAG  ( flag_fbi_missions_passed )
+DECLARE_GANG_THREE_MISSIONS_PASSED_FLAG  ( flag_neutral_missions_passed )
+//DECLARE_GANG_ONE_MISSIONS_FAILED_FLAG ( flag_army_missions_failed ) 
+//DECLARE_GANG_TWO_MISSIONS_FAILED_FLAG ( flag_fbi_missions_failed )
+//DECLARE_GANG_THREE_MISSIONS_FAILED_FLAG ( flag_neutral_missions_failed )
+
+DECLARE_MISSIONS_PASSED_FLAG ( flag_all_missions_passed ) 
+//DECLARE_MISSIONS_FAILED_FLAG ( flag_all_missions_failed ) 
+
+DECLARE_POLICELEVEL (4)
+DECLARE_FINISH_SCORE  ( 500000  )
+DECLARE_TOTAL_SECRETS ( 1 )
+
+DECLARE_TOTAL_MISSIONS ( 3 ) 
+DECLARE_GANG_ONE_MISSIONS_TOTAL ( 1 )
+DECLARE_GANG_TWO_MISSIONS_TOTAL ( 1 )
+DECLARE_GANG_THREE_MISSIONS_TOTAL ( 1 )
+
+DECLARE_GANG_ONE_MISSION_FLAG (player,  flag_on_army_mission)
+DECLARE_GANG_TWO_MISSION_FLAG (player,  flag_on_fbi_mission)   
+DECLARE_GANG_THREE_MISSION_FLAG (player,  flag_on_neutral_mission)   
+DECLARE_GANG_ONE_DEATH_BASE_BRIEF (player, 9043)
+DECLARE_GANG_TWO_DEATH_BASE_BRIEF (player, 9065)
+DECLARE_GANG_THREE_DEATH_BASE_BRIEF (player, 9021)
+DECLARE_SECRETS_PASSED_FLAG ( flag_secrets_passed )
+DECLARE_SECRETS_FAILED_FLAG ( flag_secrets_failed )
+
+
+SAVED_COUNTER counter_all_missions_passed = 0
+SAVED_COUNTER true = 1 
+SAVED_COUNTER false = 0 
+COUNTER flag_reached_finish_score = 0
+
+SOUND save_game_1 = ( 28.5 , 42.5 , 5.0 ) church_singing play_forever
+
+DECLARE_DOOR_INFO (128, 135, 3)
+DOOR_DATA fbi_door_1 = SINGLE ( 18 , 49 , 2 ) ( 18.0 , 49.5 , 2.0 , 1.0 , 1.0 ) left 0 ANY_PLAYER CLOSE_WHEN_OPEN_RULE_FAILS 0 FLIP_RIGHT NOT_REVERSED 
+DOOR_DATA tank_door1 = SINGLE ( 31 , 51 , 2 ) ( 31.5 , 51.5 , 2.0 , 1.0 , 1.0 ) top 0 ANY_PLAYER CLOSE_WHEN_OPEN_RULE_FAILS 0 FLIP_RIGHT NOT_REVERSED 
+DOOR_DATA tank_door2 = SINGLE ( 30 , 51 , 2 ) ( 30.5 , 51.5 , 2.0 , 1.0 , 1.0 ) top 0 ANY_PLAYER CLOSE_WHEN_OPEN_RULE_FAILS 0 FLIP_RIGHT NOT_REVERSED
+DOOR_DATA neutral_mission_park_door = SINGLE ( 33 , 31 , 2 ) ( 33.5 , 31.5 , 2.0 , 1.0 , 1.0 ) right 0 ANY_PLAYER CLOSE_WHEN_OPEN_RULE_FAILS 0 FLIP_RIGHT NOT_REVERSED  
+DOOR_DATA neutral_mission_antitank_door = SINGLE ( 24 , 17 , 2 ) ( 24.5 , 17.5 , 2.0 , 1.0 , 1.0 ) right 0 ANY_PLAYER CLOSE_WHEN_OPEN_RULE_FAILS 0 FLIP_RIGHT NOT_REVERSED  
+
+OBJ_DATA phone_neutral =  (6.5, 12.5, 3.0) 180 yellow_phone 
+OBJ_DATA phone_army =  (45.5, 19.5, 6.0) 180 red_phone  
+OBJ_DATA phone_fbi =  (21.5, 52.5, 3.0) 0 green_phone 
+
+OBJ_DATA machinegunshop = ( 15.5 , 43.5 , 2.0 ) 90 car_shop machinegun_shop
+OBJ_DATA sprayshop = ( 15.5 , 35.5 , 2.0 ) 90 car_shop 2
+OBJ_DATA bombshop = ( 15.5 , 39.5 , 2.0 ) 90 car_shop bomb_shop
+
+OBJ_DATA life = ( 28.5 , 43.5 , 5.0 ) 0 collect_29
+OBJ_DATA bribe = ( 34.5 , 26.5 , 2.0 ) 0 collect_33
+OBJ_DATA outjail = ( 14.5 , 34.5 , 2.0 ) 0 collect_32
+OBJ_DATA electrogun = ( 13.5 , 7.5 , 2.0 ) 0 collect_03 99
+BONUS kill_frenzy
+
+ONSCREEN_COUNTER kf_counter  
+SAVED_COUNTER counter_total
+SAVED_COUNTER kf_counter_total
+TIMER_DATA kf_timer
+
+FORWARD savepoint_1:
+FORWARD ans_neutral_phone:
+FORWARD ans_army_phone:
+FORWARD ans_fbi_phone:
+FORWARD do_kill_frenzy:
+
+
+//Генераторы оружия и бонусов.
+GENERATOR weapon_machine_gun_neutral = (5.5, 12.5, 4.0) 0 collect_01 2000 2000 1
+GENERATOR weapon_shotgun_fbi = (22.5, 53.5, 4.0) 0 collect_06 2000 2000 1
+GENERATOR weapon_rocket_army = (44.5, 19.5, 7.0) 0 collect_02 3000 3000 1
+GENERATOR health1_neutral = (7.5, 13.5, 4.0) 0 collect_30 3000 3000 
+GENERATOR health2_fbi = (19.5, 51.5, 4.0) 0 collect_30 3000 3000 
+GENERATOR health3_army = (47.5, 18.5, 7.0) 0 collect_30 3000 3000 
+GENERATOR armour1_neutral = (7.5, 11.5, 4.0) 0 collect_31 3000 3000
+GENERATOR armour2_fbi = (19.5, 55.5, 4.0) 0 collect_31 3000 3000
+GENERATOR armour3_army = (47.5, 20.5, 7.0) 0 collect_31 3000 3000
+
+CAR_DATA opponentcar
+CHAR_DATA opponent
+CHAR_DATA tank_keeper1
+CHAR_DATA tank_keeper2
+CHAR_DATA tank_keeper3
+
+//Припаркованные машины
+PARKED_CAR_DATA  car1  =   ( 22.5, 14.8, 2.0 )  35 0 buick
+PARKED_CAR_DATA gruz1 = ( 21.5, 14.8, 2.0 )  35 0 towtruck 
+PARKED_CAR_DATA gruz2 =  (19.5, 14.8, 2.0 ) 24 0 pickup 
+PARKED_CAR_DATA gruz3 =  ( 20.5, 14.8, 2.0 ) 23 0 trukcab1
+PARKED_CAR_DATA tank = (30.9, 52.5, 2.0) 5 180 tank
+PARKED_CAR_DATA playercar = ( 25.5, 25.5, 2.0 )  19 90 edsel
+PARKED_CAR_DATA swatcar1 = ( 47.5, 9.8, 2.0 )  19 0 swatvan
+PARKED_CAR_DATA swatcar2 = ( 45.5, 9.8, 2.0 )  19 0 swatvan
+PARKED_CAR_DATA swatcar3 = ( 43.5, 9.8, 2.0 )  19 0 swatvan
+PARKED_CAR_DATA emergency1 = (39.5, 48.5, 2.0) 1 270 medicar
+PARKED_CAR_DATA emergency2 = (39.5, 49.5, 2.0) 1 270 medicar
+
+THREAD_TRIGGER thr_savepoint_1 = THREAD_WAIT_FOR_CHAR_IN_AREA ( player , 29.5 , 43.5 , 2.0 , 3.0 , 1.0 , savepoint_1: )
+savepoint_1:
+PERFORM_SAVE_GAME ( thr_savepoint_1 , 29.5 , 43.5 , 2.0 , 3.0 , 1.0 )	
+RETURN
+
+THREAD_TRIGGER neutral_mission = THREAD_WAIT_FOR_ANSWER_PHONE (player, phone_neutral, ans_neutral_phone:)
+ans_neutral_phone:
+DO_EASY_PHONE_TEMPLATE (9010, StPet1.mis, flag_passed_neutral_mission, flag_failed_neutral_mission, flag_on_neutral_mission, flag_on_army_mission, flag_on_fbi_mission, neutralgang, 0)
+RETURN
+
+THREAD_TRIGGER army_mission = THREAD_WAIT_FOR_ANSWER_PHONE (player, phone_army, ans_army_phone:)
+ans_army_phone:
+DO_EASY_PHONE_TEMPLATE (9012, StPet2.mis, flag_passed_army_mission, flag_failed_army_mission, flag_on_army_mission, flag_on_fbi_mission, flag_on_neutral_mission, armygang, 0)
+RETURN
+
+THREAD_TRIGGER fbi_mission = THREAD_WAIT_FOR_ANSWER_PHONE (player, phone_fbi, ans_fbi_phone:)
+ans_fbi_phone:
+DO_EASY_PHONE_TEMPLATE (9013, StPet3.mis, flag_passed_fbi_mission, flag_failed_fbi_mission, flag_on_fbi_mission, flag_on_army_mission, flag_on_neutral_mission, fbigang, 0)
+RETURN
+
+THREAD_TRIGGER thr_kill_frenzy = THREAD_WAIT_FOR_CHAR_IN_CAR ( player , tank , do_kill_frenzy: )
+do_kill_frenzy:
+START_BASIC_KF_TEMPLATE ( thr_kill_frenzy , 6900 , tank , player , tank_gun )
+kill_frenzy = START_BONUS_CHECK ( no_zone , 3600 , 50 , 100000 , CHAR , not_exclusive , by_rocket_launcher , tank , no_occupation ) 
+DO_BASIC_KF_TEMPLATE ( kill_frenzy , kf_timer , 200 , kf_counter , kf_counter_total , 50 , 6900 , player , mult , 2 ) 
+RETURN
+
+
+
+//НАЧАЛО!!!
+
+LEVELSTART
+
+IF ( flag_game_been_saved = 0 )
+DISPLAY_BRIEF (9000) //            Приветствие
+SET flag_game_been_saved = 1
+ENDIF
+
+SET_GANG_KILL_REACTION ( fbigang , armygang , 1 )
+SET_GANG_KILL_REACTION ( neutralgang , fbigang , 1 )
+SET_GANG_KILL_REACTION ( armygang , neutralgang , 1 )
+
+SET_DEATHARREST_STATE ( player , ON ) 
+
+SET_DIR_OF_TV_VANS ( 28.5, 43.0)
+
+GIVE_CAR_ALARM (car1)
+GIVE_CAR_ALARM (gruz1)
+GIVE_CAR_ALARM (gruz2)
+GIVE_CAR_ALARM (gruz3)
+CHANGE_CAR_LOCK ( playercar , locked ) 
+CHANGE_CAR_LOCK (swatcar1, locked)
+CHANGE_CAR_LOCK (swatcar2, locked)
+CHANGE_CAR_LOCK (swatcar3, locked)
+SET_CAR_ROCKETPROOF  (  swatcar1  ,  ON  )
+SET_CAR_BULLETPROOF  (  swatcar2  ,  ON  )
+SET_CAR_ROCKETPROOF  (  swatcar3   ,  ON  )
+SET_CAR_BULLETPROOF  (  swatcar1  ,  ON  )
+SET_CAR_ROCKETPROOF  (  swatcar2   ,  ON  )
+SET_CAR_BULLETPROOF  (  swatcar3  ,  ON  )
+SET_CAR_ROCKETPROOF  (  emergency1  ,  ON  )
+SET_CAR_BULLETPROOF  (  emergency2  ,  ON  )
+
+
+SWITCH_GENERATOR (weapon_machine_gun_neutral, on)
+SWITCH_GENERATOR (weapon_shotgun_fbi, on)
+SWITCH_GENERATOR (weapon_rocket_army, on)
+SWITCH_GENERATOR (health1_neutral, on)
+SWITCH_GENERATOR (health2_fbi, on)
+SWITCH_GENERATOR (health3_army, on)
+SWITCH_GENERATOR (armour1_neutral, on)
+SWITCH_GENERATOR (armour2_fbi, on)
+SWITCH_GENERATOR (armour3_army, on)
+
+MAKE_DOOR_MANUAL (fbi_door_1)
+MAKE_DOOR_MANUAL (tank_door1)
+MAKE_DOOR_MANUAL (tank_door2)
+MAKE_DOOR_MANUAL (neutral_mission_park_door)
+MAKE_DOOR_MANUAL (neutral_mission_antitank_door)
+CLOSE_DOOR (tank_door1)
+CLOSE_DOOR (tank_door2)
+OPEN_DOOR (fbi_door_1)
+
+tank_keeper1 = CREATE_CHAR (32.5, 50.5, 2.0) 1 0 DUMMY END
+SET_CHAR_OBJECTIVE (tank_keeper1, NO_OBJ)
+tank_keeper2 = CREATE_CHAR (11.5, 7.5, 2.0) 1 0 DUMMY END
+SET_CHAR_OBJECTIVE (tank_keeper2, NO_OBJ)
+tank_keeper3 = CREATE_CHAR (47.5, 14.5, 2.0) 1 0 DUMMY END
+SET_CHAR_OBJECTIVE (tank_keeper3, NO_OBJ)
+
+WHILE_EXEC (beginning=0)
+IF (flag_game_been_saved = 1)
+opponentcar = CREATE_CAR (14.5, 25.5, 2.0) 33 90 BMW END
+opponent = CREATE_CHAR_INSIDE_CAR (opponentcar) 25 criminal END
+SET_CHAR_OBJECTIVE (opponent, GOTO_AREA_IN_CAR, 22.5, 26.7, 2.0)
+GIVE_WEAPON (opponent, rocket_launcher)
+SET_CHAR_SHOOTING_SKILL  ( opponent  , CRACK_SHOT ) 
+SET_CHAR_BRAVERY_LEVEL  ( opponent  ,  LOONY )
+SET_CHAR_DRIVE_AGGRESSION ( opponent  ,  ON  )
+SET beginning = 1
+ENDIF
+ENDWHILE
+WHILE_EXEC (beginning=1)
+IF (IS_CAR_IN_BLOCK (opponentcar, 22.5, 26.7, 2.0, 1.0, 1.0))
+ORDER_DRIVER_OUT_CAR (opponent)
+CHANGE_CAR_LOCK ( opponentcar , locked ) 
+SET beginning=2
+ENDIF
+ENDWHILE
+WHILE (beginning=2)
+IF (NOT(IS_CHARACTER_IN_CAR(opponent, opponentcar)))
+SET_CHAR_OBJECTIVE (opponent, DESTROY_CAR, playercar)
+SET beginning=3
+ENDIF
+ENDWHILE
+WHILE (beginning=3)
+IF (IS_CAR_WRECKED (playercar))
+GIVE_WEAPON (opponent, electro_gun)
+SET_CHAR_OBJECTIVE (opponent, kill_char_any_means, player)
+DISPLAY_BRIEF_NOW (9001)
+DISPLAY_MESSAGE (9002)
+SET beginning=4
+ENDIF
+ENDWHILE
+IF (beginning = 4)
+DELETE_ITEM (playercar)
+DELETE_ITEM (opponentcar)
+ENDIF
+
+
+
+WHILE (true = 1)
+IF ( (  counter_all_missions_passed = 3 ) 
+AND ( flag_on_mission = 0 ) )
+DISPLAY_BRIEF (1)
+POINT_ARROW_AT (tank_keeper1_arrow, tank_keeper1)
+POINT_ARROW_AT (tank_keeper2_arrow, tank_keeper2)
+POINT_ARROW_AT (tank_keeper3_arrow, tank_keeper3)
+ENDIF
+IF (HAS_CHARACTER_DIED (tank_keeper1))
+REMOVE_ARROW (tank_keeper1_arrow)
+ENDIF	
+IF (HAS_CHARACTER_DIED (tank_keeper2))
+REMOVE_ARROW (tank_keeper2_arrow)
+ENDIF	
+IF (HAS_CHARACTER_DIED (tank_keeper3))
+REMOVE_ARROW (tank_keeper3_arrow)
+ENDIF	
+IF (((HAS_CHARACTER_DIED (tank_keeper1)) AND (HAS_CHARACTER_DIED (tank_keeper2))) AND (HAS_CHARACTER_DIED (tank_keeper3)))
+DISPLAY_MESSAGE (3)
+OPEN_DOOR (tank_door1)
+OPEN_DOOR (tank_door2)
+ENDIF
+IF ( ( ( CHECK_SCORE_GREATER ( player , 499999 ) )
+AND ( flag_on_mission = 0 ) )
+AND ( flag_reached_finish_score = 0 ) )
+LEVEL_END_POINT_ARROW_AT ( arrow_end , 14.5 , 26.0 , 2.0 ) 
+SET flag_reached_finish_score = 1
+DISPLAY_BRIEF ( 3 )
+ENDIF
+IF ( ( ( flag_reached_finish_score = 1 )
+AND ( flag_on_mission = 1 ) )
+AND ( CHECK_SCORE_GREATER ( player , 499999 ) ) )
+REMOVE_ARROW ( arrow_end )
+SET flag_reached_finish_score = 0
+ENDIF
+IF ( ( ( flag_reached_finish_score = 1 )
+AND ( flag_on_mission = 0 ) )
+AND ( NOT ( CHECK_SCORE_GREATER ( player, 499999 ) ) ) )
+REMOVE_ARROW ( arrow_end )
+SET flag_reached_finish_score = 0
+DISPLAY_BRIEF ( 3753 )
+ENDIF
+IF ( ( ( flag_reached_finish_score = 1 )
+AND ( flag_on_mission = 0 ) )
+AND ( ( LOCATE_CHARACTER_BY_CAR ( player , 14.5 , 26.0 , 2.0 , 1.0 , 1.0 ) ) AND (IS_CAR_IN_BLOCK (tank, 14.5, 26.0, 2.0, 1.0, 1.0))))
+FINISH_LEVEL ( no_bonus )
+ENDIF
+ENDWHILE
+
+WHILE (destroying_house=0)
+IF (destroying_house = 1)
+REMOVE_BLOCK (46, 42, 4, NO_DROP)
+REMOVE_BLOCK (47, 42, 4, NO_DROP)
+REMOVE_BLOCK (46, 43, 4, NO_DROP)
+REMOVE_BLOCK (47, 43, 4, NO_DROP)
+REMOVE_BLOCK (46, 42, 3, NO_DROP)
+REMOVE_BLOCK (47, 42, 3, NO_DROP)
+REMOVE_BLOCK (46, 43, 3, NO_DROP)
+REMOVE_BLOCK (47, 43, 3, NO_DROP)
+REMOVE_BLOCK (46, 42, 2, NO_DROP)
+REMOVE_BLOCK (47, 42, 2, NO_DROP)
+REMOVE_BLOCK (46, 43, 2, NO_DROP)
+REMOVE_BLOCK (47, 43, 2, NO_DROP)
+CHANGE_BLOCK LID (45 ,42 ,1 )  not_flat not_flip 0 270 476
+CHANGE_BLOCK LID (45 ,43 ,1 )  not_flat not_flip 0 270 476
+CHANGE_BLOCK LID (47 ,41 ,1 )  not_flat not_flip 0 0 476
+CHANGE_BLOCK LID (46 ,41 ,1 )  not_flat not_flip 0 0 476
+CHANGE_BLOCK LID (46 ,42 ,1 )  not_flat not_flip 0 0 474
+CHANGE_BLOCK LID (46 ,43 ,1 )  not_flat not_flip 0 270 474
+CHANGE_BLOCK LID (47 ,42 ,1 )  not_flat not_flip 0 0 474
+CHANGE_BLOCK LID (47 ,43 ,1 )  not_flat not_flip 0 0 474
+set destroying_house=2
+ENDIF
+ENDWHILE
+
+
+LEVELEND
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+

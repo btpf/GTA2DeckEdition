@@ -1,0 +1,32 @@
+Insane Stunt Cours - made by Holy_Jack and OXMOX, MOONMONKEYS 
+*********************
+
+Für alle die gerne Springen und Slalom fahren.
+Dein Auftrag ist es Elvis (Du) zu einer Party von einem Freund zu bringen. Viel glück!
+Wir wissen das die Map schwer ist, aber wenn du es oft genug versuchst wirst du es schaffen.
+Die Map hat Lichteffekte (mehr Atmosphäre), aber sie sind nichts so toll.
+Das ist unsere erste Map, wir hoffen das es keine bugs gibt,
+aber wenn du einen findest dann mail uns bitte: moonmonkeys@gmx.net
+
+Installation:
+Extrahiere die ISC.scr und die ISC.gmp in dein GTA2\data Ordner,
+mach eine Sicherheitskopie von der Test1.seq und der g.gxt und extrahiere die in der Zip
+auch in den GTA2\data Ordner!
+(Wenn du Englisch spielen willst musst eine Sicherheitskopie von der e.gxt machen und die
+e.gxt aus der Zip nehmen)
+
+And than have fun!
+
+
+Der Insane Stunt Cours ersetzt den ersten Level und benutzt die ste.sty!
+
+
+Für Fragen, Komentare und sonstiges mailt an:
+moonmonkeys@gmx.net 
+
+-Holy_Jack and OXMOX-
+    MOONMONKEYS
+
+
+Thanx to: DMA Design! Und Gain-software!
+

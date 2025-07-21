@@ -1,0 +1,5 @@
+[MapFiles]
+GMPFile = havana.gmp
+STYFile = bil.sty
+SCRFile = Havana.SCR
+Description = Driver 2's Havana

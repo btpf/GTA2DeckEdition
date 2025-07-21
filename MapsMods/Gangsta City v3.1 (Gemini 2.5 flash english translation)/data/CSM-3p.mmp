@@ -1,0 +1,6 @@
+[MapFiles]
+GMPFile = CSMap.gmp
+STYFile = wil.sty
+SCRFile = CSMulti.scr
+Description = CSMultiplayer
+PlayerCount = 3
